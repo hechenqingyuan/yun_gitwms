@@ -1,0 +1,73 @@
+﻿@{
+    Layout = null;
+
+    Git.Storage.Entity.Finance.FinancePayEntity Entity = ViewBag.Entity;
+}
+@using Git.Framework.DataTypes;
+@using Git.Framework.DataTypes.ExtensionMethods;
+
+<div class="form-horizontal">
+    <br />
+    <div class="row-fluid">
+        <div class="span6">
+            <div class="control-group">
+                <label class="control-label dialogtitle" for="PayNum">流水号</label>
+                <div class="controls dialogcontent">
+                    <input type="text" name="PayNum" class="input-medium" placeholder="可不填,自动生成" disabled="disabled" value="@Entity.PayNum">
+                    <input type="hidden" name="SnNum" class="input-medium" placeholder="" value="@Entity.SnNum">
+                    <input type="hidden" name="BillSnNum" class="input-medium" placeholder="" value="@Entity.BillSnNum">
+                </div>
+            </div>
+        </div>
+
+        <div class="span6">
+            <div class="control-group">
+                <label class="control-label dialogtitle" for="PayType">付款方式</label>
+                <div class="controls dialogcontent">
+                    <select class="input-medium" name="PayType" style="width:165px;">
+                        @Html.Raw(ViewBag.PayTypeList)
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span6">
+            <div class="control-group">
+                <label class="control-label dialogtitle" for="BankName">付款机构</label>
+                <div class="controls dialogcontent">
+                    <input type="text" name="BankName" class="input-medium" placeholder="" value="@Entity.BankName">
+                </div>
+            </div>
+        </div>
+
+        <div class="span6">
+            <div class="control-group">
+                <label class="control-label dialogtitle" for="Amount">付款金额</label>
+                <div class="controls dialogcontent">
+                    <input type="text" name="Amount" class="input-medium" placeholder="" value="@Entity.Amount">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span6">
+            <div class="control-group">
+                <label class="control-label dialogtitle" for="PayTime">付款时间</label>
+                <div class="controls dialogcontent">
+                    <input type="text" name="PayTime" class="input-medium" placeholder="" value="@Entity.PayTime.To("yyyy-MM-dd")" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd'})">
+                </div>
+            </div>
+        </div>
+
+        <div class="span6">
+            <div class="control-group">
+                <label class="control-label dialogtitle" for="Remark">备注</label>
+                <div class="controls dialogcontent">
+                    <input type="text" name="Remark" class="input-medium" placeholder="" value="@Entity.Remark">
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

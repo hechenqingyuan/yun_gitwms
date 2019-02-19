@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3AAE39F1-5C55-4A3D-9B4C-84EC3D3A1072}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Git.Storage.Entity</RootNamespace>
+    <AssemblyName>Git.Storage.Entity</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Git.Framework.ORM">
+      <HintPath>..\..\Lib\Git.Framework.ORM.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Allocate\AllocateDetailEntity.cs" />
+    <Compile Include="Allocate\AllocateOrderEntity.cs" />
+    <Compile Include="Allocate\Proc_AuditeAllocateEntity.cs" />
+    <Compile Include="Bad\BadReportDetailEntity.cs" />
+    <Compile Include="Bad\BadReportEntity.cs" />
+    <Compile Include="Bad\Proc_AuditeBadReportEntity.cs" />
+    <Compile Include="Base\Proc_SwiftNumEntity.cs" />
+    <Compile Include="Biz\PurchaseReturnDetailEntity.cs" />
+    <Compile Include="Biz\PurchaseReturnEntity.cs" />
+    <Compile Include="Biz\SaleDetailEntity.cs" />
+    <Compile Include="Biz\PurchaseDetailEntity.cs" />
+    <Compile Include="Biz\PurchaseEntity.cs" />
+    <Compile Include="Biz\SaleOrderEntity.cs" />
+    <Compile Include="Biz\SaleReturnDetailEntity.cs" />
+    <Compile Include="Biz\SaleReturnEntity.cs" />
+    <Compile Include="Check\CloneHistoryEntity.cs" />
+    <Compile Include="Check\CloneTempEntity.cs" />
+    <Compile Include="Check\InventoryDetailEntity.cs" />
+    <Compile Include="Check\InventoryDifEntity.cs" />
+    <Compile Include="Check\InventoryOrderEntity.cs" />
+    <Compile Include="Check\Proc_AuditeCheckEntity.cs" />
+    <Compile Include="Check\Proc_CreateCheckEntity.cs" />
+    <Compile Include="Finance\FinanceBillEntity.cs" />
+    <Compile Include="Finance\FinanceCateEntity.cs" />
+    <Compile Include="Finance\FinancePayEntity.cs" />
+    <Compile Include="InStorage\InStorageEntity.cs" />
+    <Compile Include="InStorage\InStorDetailEntity.cs" />
+    <Compile Include="InStorage\Proc_AuditeInStorageEntity.cs" />
+    <Compile Include="InStorage\TP\TP_InStorageEntity.cs" />
+    <Compile Include="InStorage\TP\TP_InStorDetailEntity.cs" />
+    <Compile Include="Move\MoveOrderDetailEntity.cs" />
+    <Compile Include="Move\MoveOrderEntity.cs" />
+    <Compile Include="Move\Proc_AuditeMoveEntity.cs" />
+    <Compile Include="OutStorage\OutStoDetailEntity.cs" />
+    <Compile Include="OutStorage\OutStorageEntity.cs" />
+    <Compile Include="OutStorage\Proc_AuditeOutStorageEntity.cs" />
+    <Compile Include="Pick\Proc_PickProductEntity.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Report\BalanceBookEntity.cs" />
+    <Compile Include="Report\ProceMetadata.cs" />
+    <Compile Include="Report\ReportParamsEntity.cs" />
+    <Compile Include="Report\ReportsEntity.cs" />
+    <Compile Include="Sku\ProductSkuEntity.cs" />
+    <Compile Include="Sku\V_SkuEntity.cs" />
+    <Compile Include="Storage\CarEntity.cs" />
+    <Compile Include="Storage\CusAddressEntity.cs" />
+    <Compile Include="Storage\CustomerEntity.cs" />
+    <Compile Include="Storage\EquipmentEntity.cs" />
+    <Compile Include="Storage\InventoryBookEntity.cs" />
+    <Compile Include="Storage\LocalProductEntity.cs" />
+    <Compile Include="Storage\LocationEntity.cs" />
+    <Compile Include="Storage\MeasureEntity.cs" />
+    <Compile Include="Storage\MeasureRelEntity.cs" />
+    <Compile Include="Storage\ProductCategoryEntity.cs" />
+    <Compile Include="Storage\ProductEntity.cs" />
+    <Compile Include="Storage\StorageEntity.cs" />
+    <Compile Include="Storage\SupplierEntity.cs" />
+    <Compile Include="Storage\V_LocalCapacityEntity.cs" />
+    <Compile Include="Storage\V_LocalProductEntity.cs" />
+    <Compile Include="Storage\V_StorageProductEntity.cs" />
+    <Compile Include="Sys\AdminEntity.cs" />
+    <Compile Include="Sys\CarrierEntity.cs" />
+    <Compile Include="Sys\CompanyEntity.cs" />
+    <Compile Include="Sys\ResourceEntity.cs" />
+    <Compile Include="Sys\SequenceEntity.cs" />
+    <Compile Include="Sys\SysDepartEntity.cs" />
+    <Compile Include="Sys\SysRelationEntity.cs" />
+    <Compile Include="Sys\SysResourceEntity.cs" />
+    <Compile Include="Sys\SysRoleEntity.cs" />
+    <Compile Include="Sys\TNumEntity.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="OutStorage\TP\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

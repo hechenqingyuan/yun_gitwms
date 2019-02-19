@@ -1,0 +1,393 @@
+﻿@using Git.Storage.Entity.Sys
+@using Git.WMS.Web.Lib
+@{
+    List<SysResourceEntity> ListResult = ViewBag.ListResult;
+}
+
+<form class="form-horizontal">
+    <!--入库管理-->
+    <div class="row-fluid">
+        <div class="span1 ">
+            <label class="checkbox inline">
+                <strong>入库管理</strong>
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Storage_2000") 入库单列表
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Storage_3000") 新增/编辑
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Storage_3001") 查询入库
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Storage_3002") 保存入库
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Storage_3003") 删除入库
+            </label>
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span1 ">
+            <label class="checkbox inline">
+                <strong>&nbsp;</strong>
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Storage_3004") 取消入库
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Storage_3005") 审核入库
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Storage_3006") 打印单据
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Storage_3007") 导出Excel
+            </label>
+        </div>
+    </div>
+    
+
+
+    <!--出库管理-->
+    <div class="row-fluid">
+        <div class="span1 ">
+            <label class="checkbox inline">
+                <strong>出库管理</strong>
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Storage_2001") 出库单列表
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Storage_3100") 新增/编辑
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Storage_3101") 查询出库
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Storage_3102") 保存出库
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Storage_3103") 删除出库
+            </label>
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span1 ">
+            <label class="checkbox inline">
+                <strong>&nbsp;</strong>
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Storage_3104") 取消出库
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Storage_3105") 审核出库
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Storage_3106") 打印单据
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Storage_3107") 导出Excel
+            </label>
+        </div>
+    </div>
+
+
+
+
+    <!--报损管理-->
+    <div class="row-fluid">
+        <div class="span1 ">
+            <label class="checkbox inline">
+                <strong>报损管理</strong>
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Storage_2002") 报损单列表
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Storage_3200") 新增/编辑
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Storage_3201") 查询报损
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Storage_3202") 保存报损
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Storage_3203") 删除报损
+            </label>
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span1 ">
+            <label class="checkbox inline">
+                <strong>&nbsp;</strong>
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Storage_3204") 取消报损
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Storage_3205") 审核报损
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Storage_3206") 打印单据
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Storage_3207") 导出Excel
+            </label>
+        </div>
+    </div>
+
+
+
+
+    <!--移库管理-->
+    <div class="row-fluid">
+        <div class="span1 ">
+            <label class="checkbox inline">
+                <strong>移库管理</strong>
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Storage_2003") 移库单列表
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Storage_3300") 新增/编辑
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Storage_3301") 查询移库
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Storage_3302") 保存移库
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Storage_3303") 删除移库
+            </label>
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span1 ">
+            <label class="checkbox inline">
+                <strong>&nbsp;</strong>
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Storage_3304") 取消移库
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Storage_3305") 审核移库
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Storage_3306") 打印单据
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Storage_3307") 导出Excel
+            </label>
+        </div>
+    </div>
+
+
+    <!--盘点管理-->
+    <div class="row-fluid">
+        <div class="span1 ">
+            <label class="checkbox inline">
+                <strong>盘点管理</strong>
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Storage_2004") 盘点单列表
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Storage_3400") 新增/编辑
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Storage_3401") 查询盘点
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Storage_3402") 保存盘点
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Storage_3403") 删除盘点
+            </label>
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span1 ">
+            <label class="checkbox inline">
+                <strong>&nbsp;</strong>
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Storage_3404") 取消盘点
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Storage_3405") 审核盘点
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Storage_3406") 打印单据
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Storage_3407") 导出Excel
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Storage_3408") 完成作业
+            </label>
+        </div>
+    </div>
+
+
+    <!--调拨管理-->
+    <div class="row-fluid">
+        <div class="span1 ">
+            <label class="checkbox inline">
+                <strong>调拨管理</strong>
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Storage_2005") 调拨单列表
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Storage_3500") 新增/编辑
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Storage_3501") 查询调拨
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Storage_3502") 保存调拨
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Storage_3503") 删除调拨
+            </label>
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span1 ">
+            <label class="checkbox inline">
+                <strong>&nbsp;</strong>
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Storage_3504") 取消调拨
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Storage_3505") 审核调拨
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Storage_3506") 打印单据
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Storage_3507") 导出Excel
+            </label>
+        </div>
+    </div>
+</form>
+
+<div class="form-actions">
+    <button type="button" class="btn btn-primary" data-command="Save"><i class="icon-ok"></i> 保存</button>
+    <button type="button" class="btn" data-command="Cancel">取消</button>
+</div>

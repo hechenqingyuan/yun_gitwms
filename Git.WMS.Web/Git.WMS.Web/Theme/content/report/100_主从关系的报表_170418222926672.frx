@@ -1,0 +1,99 @@
+﻿﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReportInfo.Created="04/18/2017 23:46:13" ReportInfo.Modified="04/18/2017 23:46:13" ReportInfo.CreatorVersion="2015.3.7.0">
+  <Dictionary>
+    <TableDataSource Name="Table" ReferenceName="Data.Table" DataType="System.Int32" Enabled="true">
+      <Column Name="ID" DataType="System.Int64"/>
+      <Column Name="SnNum" DataType="System.String"/>
+      <Column Name="OrderNum" DataType="System.String"/>
+      <Column Name="InType" DataType="System.Int64"/>
+      <Column Name="ProductType" DataType="System.Int64"/>
+      <Column Name="StorageNum" DataType="System.String"/>
+      <Column Name="SupSnNum" DataType="System.String"/>
+      <Column Name="SupNum" DataType="System.String"/>
+      <Column Name="SupName" DataType="System.String"/>
+      <Column Name="ContactName" DataType="System.String"/>
+      <Column Name="Phone" DataType="System.String"/>
+      <Column Name="Address" DataType="System.String"/>
+      <Column Name="ContractOrder" DataType="System.String"/>
+      <Column Name="ContractType" DataType="System.Int64"/>
+      <Column Name="Status" DataType="System.Int64"/>
+      <Column Name="IsDelete" DataType="System.Int64"/>
+      <Column Name="Num" DataType="System.Double"/>
+      <Column Name="Amount" DataType="System.Double"/>
+      <Column Name="NetWeight" DataType="System.Double"/>
+      <Column Name="GrossWeight" DataType="System.Double"/>
+      <Column Name="OrderTime" DataType="System.String"/>
+      <Column Name="CreateTime" DataType="System.String"/>
+      <Column Name="CreateUser" DataType="System.String"/>
+      <Column Name="AuditUser" DataType="System.String"/>
+      <Column Name="AuditeTime" DataType="System.String"/>
+      <Column Name="PrintUser" DataType="System.String"/>
+      <Column Name="PrintTime" DataType="System.String"/>
+      <Column Name="StoreKeeper" DataType="System.String"/>
+      <Column Name="Reason" DataType="System.String"/>
+      <Column Name="OperateType" DataType="System.Int64"/>
+      <Column Name="EquipmentNum" DataType="System.String"/>
+      <Column Name="EquipmentCode" DataType="System.String"/>
+      <Column Name="Remark" DataType="System.String"/>
+      <Column Name="CompanyID" DataType="System.String"/>
+    </TableDataSource>
+    <TableDataSource Name="Table1" ReferenceName="Data.Table1" DataType="System.Int32" Enabled="true">
+      <Column Name="ID" DataType="System.Int64"/>
+      <Column Name="SnNum" DataType="System.String"/>
+      <Column Name="OrderSnNum" DataType="System.String"/>
+      <Column Name="ProductName" DataType="System.String"/>
+      <Column Name="BarCode" DataType="System.String"/>
+      <Column Name="ProductNum" DataType="System.String"/>
+      <Column Name="BatchNum" DataType="System.String"/>
+      <Column Name="Num" DataType="System.Double"/>
+      <Column Name="IsPick" DataType="System.Int64"/>
+      <Column Name="RealNum" DataType="System.Double"/>
+      <Column Name="InPrice" DataType="System.Double"/>
+      <Column Name="Amount" DataType="System.Double"/>
+      <Column Name="ContractOrder" DataType="System.String"/>
+      <Column Name="CreateTime" DataType="System.String"/>
+      <Column Name="LocalNum" DataType="System.String"/>
+      <Column Name="StorageNum" DataType="System.String"/>
+      <Column Name="CompanyID" DataType="System.String"/>
+    </TableDataSource>
+  </Dictionary>
+  <ReportPage Name="Page1">
+    <ReportTitleBand Name="ReportTitle1" Width="718.2" Height="28.35">
+      <TextObject Name="Text1" Left="207.82" Width="245.7" Height="18.9" Text="主从关系报表演示标题" HorzAlign="Center" VertAlign="Center" Font="Arial, 14pt, style=Bold"/>
+    </ReportTitleBand>
+    <PageHeaderBand Name="PageHeader2" Width="718.2" Height="28.35">
+      <TextObject Name="Text4" Left="236.14" Width="189" Height="28.35" Text="吉特仓储入库单" HorzAlign="Center" VertAlign="Center" Font="Arial, 14pt, style=Bold"/>
+      <TextObject Name="Text5" Left="576.15" Width="141.75" Height="18.9" Text="当前页:[Page#]/[TotalPages#]"/>
+    </PageHeaderBand>
+    <GroupHeaderBand Name="GroupHeader1" Width="718.2" Height="18.9" Condition="[Table.ID]">
+      <TextObject Name="Text8" Width="37.8" Height="18.9" Text="单号:" VertAlign="Center"/>
+      <TextObject Name="Text9" Left="37.8" Width="122.85" Height="18.9" Text="[Table.OrderNum]" VertAlign="Center"/>
+      <TextObject Name="Text10" Left="188.99" Width="47.25" Height="18.9" Text="供应商:" VertAlign="Center"/>
+      <TextObject Name="Text11" Left="236.23" Width="274.05" Height="18.9" Text="[Table.SupName]" VertAlign="Center"/>
+      <TextObject Name="Text12" Left="538.63" Width="37.8" Height="18.9" Text="仓库:" VertAlign="Center"/>
+      <TextObject Name="Text13" Left="576.4" Width="103.95" Height="18.9" Text="[Table.SupNum]" VertAlign="Center"/>
+      <DataBand Name="Data3" Width="718.2" Height="28.35" DataSource="Table">
+        <TextObject Name="Text14" Top="9.42" Width="122.85" Height="18.9" Border.Lines="All" Text="产品编号" HorzAlign="Center" VertAlign="Center"/>
+        <TextObject Name="Text15" Left="122.84" Top="9.45" Width="160.65" Height="18.9" Border.Lines="All" Text="产品名称" HorzAlign="Center" VertAlign="Center"/>
+        <TextObject Name="Text16" Left="283.49" Top="9.45" Width="122.85" Height="18.9" Border.Lines="All" Text="数量" HorzAlign="Center" VertAlign="Center"/>
+        <TextObject Name="Text17" Left="406.33" Top="9.45" Width="122.85" Height="18.9" Border.Lines="All" Text="批次" HorzAlign="Center" VertAlign="Center"/>
+        <TextObject Name="Text18" Left="529.18" Top="9.45" Width="122.85" Height="18.9" Border.Lines="All" Text="价格" HorzAlign="Center" VertAlign="Center"/>
+        <DataBand Name="Data2" Width="718.2" Height="18.9" DataSource="Table1" Filter="[Table1.OrderSnNum]==[Table.SnNum]">
+          <TextObject Name="Text20" Width="122.85" Height="18.9" Border.Lines="All" Text="[Table1.BarCode]" HorzAlign="Center" VertAlign="Center"/>
+          <TextObject Name="Text21" Left="122.84" Width="160.65" Height="18.9" Border.Lines="All" Text="[Table1.ProductName]" HorzAlign="Center" VertAlign="Center"/>
+          <TextObject Name="Text22" Left="283.48" Width="122.85" Height="18.9" Border.Lines="All" Text="[Table1.Num]" HorzAlign="Center" VertAlign="Center"/>
+          <TextObject Name="Text23" Left="406.32" Width="122.85" Height="18.9" Border.Lines="All" Text="[Table1.BatchNum]" HorzAlign="Center" VertAlign="Center"/>
+          <TextObject Name="Text24" Left="529.16" Width="122.85" Height="18.9" Border.Lines="All" Text="[Table1.InPrice]" HorzAlign="Center" VertAlign="Center"/>
+          <Sort>
+            <Sort Expression="[Table1.ID]"/>
+          </Sort>
+        </DataBand>
+        <Sort>
+          <Sort Expression="[Table1.ID]"/>
+        </Sort>
+      </DataBand>
+      <GroupFooterBand Name="GroupFooter1" Width="718.2" Height="28.35"/>
+    </GroupHeaderBand>
+    <PageFooterBand Name="PageFooter1" Width="718.2" Height="37.78"/>
+  </ReportPage>
+</Report>

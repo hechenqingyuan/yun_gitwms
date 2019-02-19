@@ -1,0 +1,169 @@
+﻿@{
+    Layout = null;
+}
+
+
+<div class="form-horizontal">
+    <br/>
+    <div class="row-fluid">
+        <div class="span6">
+            <div class="control-group">
+                <label class="control-label dialogtitle" for="firstName">产品编号</label>
+                <div class="controls dialogcontent">
+                    <input type="text" name="BarCode" class="input-medium" placeholder="可不填,自动生成" disabled="disabled" value="@ViewBag.Entity.BarCode">
+                    <input type="hidden" name="SnNum" class="input-medium" placeholder="" value="@ViewBag.Entity.SnNum">
+                </div>
+            </div>
+        </div>
+        
+        <div class="span6">
+            <div class="control-group">
+                <label class="control-label dialogtitle" for="lastName">产品名称</label>
+                <div class="controls dialogcontent">
+                    <input type="text" name="ProductName" class="input-medium" placeholder="" value="@ViewBag.Entity.ProductName">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span6">
+            <div class="control-group">
+                <label class="control-label dialogtitle" for="FactoryNum">厂家编码</label>
+                <div class="controls dialogcontent">
+                    <input type="text" name="FactoryNum" class="input-medium" value="@ViewBag.Entity.FactoryNum">
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="span6">
+            <div class="control-group">
+                <label class="control-label dialogtitle" for="InCode">内部编码</label>
+                <div class="controls dialogcontent">
+                    <input type="text" name="InCode" class="input-medium" placeholder="" value="@ViewBag.Entity.InCode">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span6">
+            <div class="control-group">
+                <label class="control-label dialogtitle" for="firstName">单位</label>
+                <div class="controls dialogcontent">
+                    <select class="input-medium" name="UnitNum" style="width:165px;">
+                        @Html.Raw(ViewBag.Unit)
+                    </select>
+                </div>
+            </div>
+        </div>
+        
+        <div class="span6">
+            <div class="control-group">
+                <label class="control-label dialogtitle" for="lastName">类别</label>
+                <div class="controls dialogcontent">
+                    <select class="input-medium" name="CateNum" style="width:165px;">
+                        @Html.Raw(ViewBag.Cate)
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span6">
+            <div class="control-group">
+                <label class="control-label dialogtitle" for="firstName">上限值</label>
+                <div class="controls dialogcontent">
+                    <input type="text" name="MaxNum" class="input-medium" placeholder="" value="@ViewBag.Entity.MaxNum">
+                </div>
+            </div>
+        </div>
+        
+        <div class="span6">
+            <div class="control-group">
+                <label class="control-label dialogtitle" for="lastName">下限值</label>
+                <div class="controls dialogcontent">
+                    <input type="text" name="MinNum" class="input-medium" placeholder="" value="@ViewBag.Entity.MinNum">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span6">
+            <div class="control-group">
+                <label class="control-label dialogtitle" for="firstName">规格</label>
+                <div class="controls dialogcontent">
+                    <input type="text" name="Size" class="input-medium" placeholder="" value="@ViewBag.Entity.Size">
+                </div>
+            </div>
+        </div>
+        
+        <div class="span6">
+            <div class="control-group">
+                <label class="control-label dialogtitle" for="lastName">价格</label>
+                <div class="controls dialogcontent">
+                    <input type="text" name="AvgPrice" class="input-medium" placeholder="" value="@ViewBag.Entity.AvgPrice">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span6">
+            <div class="control-group">
+                <label class="control-label dialogtitle" for="firstName">默认仓库</label>
+                <div class="controls dialogcontent">
+                    <select class="input-medium" name="StorageNum" style="width:165px;">
+                        @Html.Raw(ViewBag.Storage)
+                    </select>
+                </div>
+            </div>
+        </div>
+        
+        <div class="span6">
+            <div class="control-group">
+                <label class="control-label dialogtitle" for="lastName">默认库位</label>
+                <div class="controls dialogcontent">
+                    <input type="text" name="LocalName" class="input-medium" placeholder="双击选择库位" value="@ViewBag.Entity.LocalName">
+                    <input type="hidden" name="DefaultLocal" value="@ViewBag.Entity.DefaultLocal" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span6">
+            <div class="control-group">
+                <label class="control-label dialogtitle" for="firstName">默认供应商</label>
+                <div class="controls dialogcontent">
+                    <input type="text" name="SupName" class="input-medium" placeholder="双击选择供应商" value="@ViewBag.Entity.SupName">
+                    <input type="hidden" name="SupNum" value="@ViewBag.Entity.SupNum"/>
+                </div>
+            </div>
+        </div>
+        <div class="span6">
+            <div class="control-group">
+                <label class="control-label dialogtitle" for="lastName">默认客户</label>
+                <div class="controls dialogcontent">
+                    <input type="text" name="CusName" class="input-medium" placeholder="双击选择客户" value="@ViewBag.Entity.CusName">
+                    <input type="hidden" name="CusNum" value="@ViewBag.Entity.CusNum" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span6">
+            <div class="control-group">
+                <label class="control-label dialogtitle" for="firstName">显示名</label>
+                <div class="controls dialogcontent">
+                    <input type="text" name="Display" class="input-medium" placeholder="" value="@ViewBag.Entity.Display">
+                </div>
+            </div>
+        </div>
+        <div class="span6">
+            <div class="control-group">
+                <label class="control-label dialogtitle" for="lastName">备注</label>
+                <div class="controls dialogcontent">
+                    <input type="text" name="Remark" class="input-medium" placeholder="" value="@ViewBag.Entity.Remark">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

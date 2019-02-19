@@ -1,0 +1,275 @@
+﻿
+@using Git.Storage.Entity.Sys
+@using Git.WMS.Web.Lib
+@{
+    List<SysResourceEntity> ListResult = ViewBag.ListResult;
+}
+
+<form class="form-horizontal">
+    <div class="row-fluid">
+        <div class="span1 ">
+            <label class="checkbox inline">
+                <strong>采购管理</strong>
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "PO_2000") 采购单列表
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "PO_3000") 新增/编辑
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "PO_3002") 查询采购
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "PO_3003") 保存采购
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "PO_3004") 删除采购
+            </label>
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span1 ">
+            <label class="checkbox inline">
+                <strong>&nbsp;</strong>
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "PO_3005") 取消采购
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "PO_3006") 审核采购
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "PO_3007") 打印单据
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "PO_3008") 导出Excel
+            </label>
+        </div>
+    </div>
+    
+
+
+    <div class="row-fluid">
+        <div class="span1 ">
+            <label class="checkbox inline">
+                <strong>销售管理</strong>
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "PO_2005") 销售单列表
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "PO_3500") 新增/编辑
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "PO_3502") 查询销售
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "PO_3503") 保存销售
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "PO_3504") 删除销售
+            </label>
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span1 ">
+            <label class="checkbox inline">
+                <strong>&nbsp;</strong>
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "PO_3505") 取消销售
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "PO_3506") 审核销售
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "PO_3507") 打印单据
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "PO_3508") 导出Excel
+            </label>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <div class="row-fluid">
+        <div class="span1 ">
+            <label class="checkbox inline">
+                <strong>采购退货</strong>
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "PO_2001") 采购退货列表
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "PO_3100") 新增/编辑
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "PO_3101") 查询采购退货
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "PO_3102") 保存采购退货
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "PO_3103") 删除采购退货
+            </label>
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span1 ">
+            <label class="checkbox inline">
+                <strong>&nbsp;</strong>
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "PO_3104") 取消采购退货
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "PO_3105") 审核采购退货
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "PO_3106") 打印单据
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "PO_3107") 导出Excel
+            </label>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <div class="row-fluid">
+        <div class="span1 ">
+            <label class="checkbox inline">
+                <strong>销售退货</strong>
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "PO_2006") 销售退货列表
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "PO_3600") 新增/编辑
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "PO_3601") 查询销售退货
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "PO_3602") 保存销售退货
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "PO_3603") 删除销售退货
+            </label>
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span1 ">
+            <label class="checkbox inline">
+                <strong>&nbsp;</strong>
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "PO_3604") 取消销售退货
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "PO_3605") 审核销售退货
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "PO_3606") 打印单据
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "PO_3607") 导出Excel
+            </label>
+        </div>
+    </div>
+</form>
+
+<div class="form-actions">
+    <button type="button" class="btn btn-primary" data-command="Save"><i class="icon-ok"></i> 保存</button>
+    <button type="button" class="btn" data-command="Cancel">取消</button>
+</div>

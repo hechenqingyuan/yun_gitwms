@@ -1,0 +1,31 @@
+﻿@{
+    Layout = null;
+}
+@using Git.Framework.DataTypes;
+@using Git.Framework.DataTypes.ExtensionMethods;
+@{
+    Git.Storage.Entity.Sys.CarrierEntity Entity = ViewBag.Entity;
+}
+
+<div class="form-horizontal">
+    <br />
+    <div class="control-group">
+        <label class="control-label dialogtitle">承运商编号</label>
+        <div class="controls dialogcontent">
+            <input type="text" name="CarrierNum" placeholder="可不填,自动生成" class="input-medium" value="@Entity.CarrierNum">
+            <input type="hidden" name="SnNum" value="@Entity.SnNum">
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label dialogtitle">承运商名称</label>
+        <div class="controls dialogcontent">
+            <input name="CarrierName" type="text" class="input-medium" value="@Entity.CarrierName">
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label dialogtitle">备注</label>
+        <div class="controls dialogcontent">
+            <input name="Remark" type="text" class="input-medium" value="@Entity.Remark">
+        </div>
+    </div>
+</div>

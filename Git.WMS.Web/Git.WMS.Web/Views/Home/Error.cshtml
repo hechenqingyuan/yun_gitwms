@@ -1,0 +1,62 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+    @Html.Partial("_PageTitle")
+</head>
+<body class="fixed-top">
+
+    @Html.Partial("_Header")
+
+    <div id="container" class="row-fluid @ViewBag.MenuStatus">
+        @Html.Partial("_Sidebar")
+
+        <div id="body">
+            <div id="widget-config" class="modal hide">
+                <div class="modal-header">
+                    <button data-dismiss="modal" class="close" type="button">×</button>
+                    <h3>Widget Settings</h3>
+                </div>
+                <div class="modal-body">
+                    <p>Here will be a configuration form</p>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row-fluid">
+                    <div class="span12">
+                        <div class="row-fluid page-404">
+                            <div class="span5 number">
+                                Warn
+                            </div>
+                            <div class="span7 details">
+                                <h3>对不起,您没有权限操该项</h3>
+                                <p>
+                                    当前登录账号无法操作该项,<br>
+                                    您可以使用其他更高级别账号登录,<br>
+                                    或者联系管理员分配更高权限<br>
+
+                                    </p><h4><a href="/Home/Index">点击跳转登录页面</a></h4>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @Html.Partial("_Foot")
+    <script>
+        jQuery(document).ready(function () {
+            App.init();
+        });
+    </script>
+</body>
+</html>

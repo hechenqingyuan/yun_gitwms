@@ -1,0 +1,351 @@
+
+.mmGrid{
+    position: relative;
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+.mmGrid table{
+    border-collapse: separate;
+    border-spacing: 0;
+    text-align: left;
+
+}
+
+.mmGrid input[type="radio"],
+.mmGrid input[type="checkbox"]{
+    margin: 0;
+}
+
+/* 遮罩 */
+.mmGrid .mmg-mask{
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background: #ddd;
+
+
+}
+
+/* 半透明 */
+.mmGrid .mmg-transparent{
+    /* IE 8 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+    /* IE 5-7 */
+    filter: alpha(opacity=50);
+    /* Netscape */
+    -moz-opacity: 0.5;
+    /* Safari 1.x */
+    -khtml-opacity: 0.5;
+    /* Good browsers */
+    opacity: 0.5;
+}
+
+/* loading */
+.mmGrid .mmg-loading{
+    position: absolute;
+    display: none;
+    text-align: center;
+
+}
+
+.mmGrid .mmg-loading .mmg-loadingImg{
+    margin: 5px auto;
+    width: 32px;
+    height: 32px;
+    background: url(img/loading.gif) no-repeat center center;
+}
+
+.mmGrid .mmg-loading .mmg-loadingText{
+
+}
+
+/* 标题包装 */
+.mmGrid .mmg-headWrapper{
+    position: relative;
+    overflow: hidden;
+    width: 9999px;
+
+    background: #eee; /* Old browsers */
+    background: -moz-linear-gradient(top,  #f9f9f9 0%, #eaeaea 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f9f9f9), color-stop(100%,#eaeaea)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #f9f9f9 0%,#eaeaea 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #f9f9f9 0%,#eaeaea 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #f9f9f9 0%,#eaeaea 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #f9f9f9 0%,#eaeaea 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', endColorstr='#eaeaea',GradientType=0 ); /* IE6-8 */
+
+    -moz-box-shadow: 0 0px 2px #bbb;
+    -webkit-box-shadow: 0 0px 2px #bbb;
+    box-shadow: 0 0px 2px #bbb;
+    border-top: 0px solid #FFF;
+    z-index: 1;
+
+}
+
+/* 标题 */
+.mmGrid .mmg-headWrapper .mmg-head{
+    position: relative;
+}
+
+.mmGrid .mmg-headWrapper .mmg-head th{
+    position: relative;
+    padding: 0 5px;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #d2d2d2;
+    overflow: hidden;
+}
+
+.mmGrid .mmg-headWrapper .mmg-head th.mmg-groupCol{
+    /* 分组列 */
+}
+
+.mmGrid .mmg-headWrapper .mmg-head th input{
+    height: 2em;
+}
+
+.mmGrid .mmg-headWrapper .mmg-head th .mmg-titleWrapper{
+    position: relative;
+    height: 2em;
+}
+
+.mmGrid .mmg-headWrapper .mmg-head th .mmg-titleWrapper .mmg-colResize{
+    position: absolute;
+    top: 0;
+    right: -6px;
+    _right: -4px;
+    width: 4px;
+    height: 100%;
+    cursor: col-resize;
+}
+
+.mmGrid .mmg-headWrapper .mmg-head th .mmg-titleWrapper .mmg-title{
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    height: 2em;
+    font-weight: bold;
+    line-height: 2;
+    vertical-align: top;
+}
+
+.mmGrid .mmg-headWrapper .mmg-head th .mmg-titleWrapper .mmg-canSort{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.mmGrid .mmg-headWrapper .mmg-head th .mmg-titleWrapper .mmg-sort{
+    overflow: hidden;
+    display: none;
+    width: 7px;
+    height: 2em;
+    margin-left: 2px;
+    vertical-align: top;
+}
+
+.mmGrid .mmg-headWrapper .mmg-head th .mmg-titleWrapper .mmg-asc{
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    background: url(img/sort-asc.png) no-repeat center center;
+}
+
+.mmGrid .mmg-headWrapper .mmg-head th .mmg-titleWrapper .mmg-desc{
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    background: url(img/sort-desc.png) no-repeat center center;
+}
+
+.mmGrid  .mmg-colResizePointer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    width: 1px;
+    height: 100%;
+    background: #999;
+    cursor: col-resize;
+    z-index: 1;
+}
+
+.mmGrid  .mmg-colResizePointer-before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    width: 1px;
+    height: 100%;
+    background: #999;
+    cursor: col-resize;
+    z-index: 1;
+}
+
+/* 背板 */
+.mmGrid .mmg-backboard{
+    position: relative;
+    display: none;
+    background-image: url(img/furley_bg.png);
+    background-image: -webkit-image-set(
+        url(img/furley_bg.png) 1x,
+        url(img/furley_bg_@2X.png) 2x
+    );
+    -webkit-box-shadow: inset 0 0 2px 1px #d9d9d9;
+    -moz-box-shadow: inset 0 0 2px 1px #d9d9d9;
+    -o-box-shadow: inset 0 0 2px 1px #d9d9d9;
+    -ms-box-shadow: inset 0 0 2px 1px #d9d9d9;
+    box-shadow: inset 0 0 2px 1px #d9d9d9;
+    text-align: left;
+}
+.mmGrid .mmg-backboard h1{
+    margin: 0 10px 5px 10px;
+    padding: 10px 0 5px 0;
+    font-size: 1em;
+    font-weight: bold;
+    line-height: 1.8;
+    border-bottom: 1px solid #ccc;
+}
+
+.mmGrid .mmg-backboard label{
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    width: 95px;
+    font-size: 1em;
+    line-height: 2.2;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.mmGrid .mmg-backboard label input{
+    margin: 0 5px 0 10px;
+    padding: 0px;
+    border: 0px;
+}
+
+/* 内容包装器 */
+.mmGrid .mmg-bodyWrapper{
+    position: relative;
+    overflow: auto;
+    width: 9999px;
+    min-height: 0%; /* fix IE9 hover bug see: http://jsfiddle.net/pjkix/86Lfv/ */
+}
+
+/* 内容 */
+.mmGrid .mmg-bodyWrapper .mmg-body{
+    table-layout: fixed;
+}
+
+.mmGrid .mmg-bodyWrapper .mmg-body tr{
+    height: 30px;
+}
+
+.mmGrid .mmg-bodyWrapper .mmg-body tr.even{
+    background: #f9f9f9;
+}
+
+.mmGrid .mmg-bodyWrapper .mmg-body td{
+    padding: 0 5px;
+    border-right: 1px solid #e4e4e4;
+    border-bottom: 1px solid #e4e4e4;
+    line-height: 2;
+}
+
+.mmGrid .mmg-bodyWrapper .mmg-body td.colSelected{
+    background: #f7f7f7;
+}
+
+.mmGrid .mmg-bodyWrapper .mmg-body td.colSelectedEven{
+    background: #f5f5f5;
+}
+
+.mmGrid .mmg-bodyWrapper .mmg-body tr.hover td{
+    background: #e1eff8;
+}
+
+.mmGrid .mmg-bodyWrapper .mmg-body tr:hover td{
+    background: #e1eff8;
+}
+
+.mmGrid .mmg-bodyWrapper .mmg-body tr.selected td{
+    background: #fff5cc;
+}
+
+.mmGrid .mmg-bodyWrapper .mmg-body td .mmg-index{
+    color: #555;
+}
+
+.mmGrid .nowrap{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    -ms-text-overflow: ellipsis;
+}
+
+/* 消息 */
+.mmGrid .mmg-message{
+    position: absolute;
+    display: none;
+    text-align: center;
+}
+
+.mmGrid .mmg-btnBackboardDn{
+    position: absolute;
+    top: 0;
+    right: 20px;
+    display: block;
+    width: 50px;
+    height: 20px;
+    background: #fff url(img/arrow_down.png) no-repeat center center;
+    border: 1px solid #ccc;
+    border-top: 0;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    -webkit-box-shadow: 1px 1px 3px #ccc;
+    -moz-box-shadow: 1px 1px 3px #ccc;
+    -o-box-shadow: 1px 1px 3px #ccc;
+    -ms-box-shadow: 1px 1px 3px #ccc;
+    box-shadow:1px 1px 3px #ccc;
+    cursor: pointer;
+}
+
+.mmGrid .mmg-backboard .mmg-btnBackboardUp{
+    position: absolute;
+    right: 20px;
+    bottom: 0;
+    display: block;
+    width: 50px;
+    height: 20px;
+    background: #fff url(img/arrow_up.png) no-repeat center center;
+    border: 1px solid #ccc;
+    border-bottom: 0;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    -webkit-box-shadow: 1px 1px 3px #ccc;
+    -moz-box-shadow: 1px 1px 3px #ccc;
+    -o-box-shadow: 1px 1px 3px #ccc;
+    -ms-box-shadow: 1px 1px 3px #ccc;
+    box-shadow:1px 1px 3px #ccc;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+

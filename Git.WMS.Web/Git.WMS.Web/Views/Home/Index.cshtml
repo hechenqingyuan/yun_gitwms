@@ -1,0 +1,106 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+ <!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+    <meta charset="utf-8" />
+    <title>吉特仓储管理系统</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <link href="/Theme/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/Theme/assets/plugins/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" />
+    <link href="/Theme/assets/plugins/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link href="/Theme/assets/css/style.css" rel="stylesheet" />
+    <link href="/Theme/assets/css/style-responsive.css" rel="stylesheet" />
+    <link href="/Theme/assets/css/themes/default.css" rel="stylesheet" id="style_color" />
+    <link href="/Theme/assets/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css" />
+    <link href="#" rel="stylesheet" id="style_metro" />
+    <link href="/Theme/assets/css/pages/login.css" rel="stylesheet" type="text/css" />
+    <link href="/Theme/assets/plugins/jbox-v2.3/jBox/Skins/Gray/jbox.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="logo" class="center" style="color:white;">
+        吉特仓储管理系统
+    </div>
+    <div id="login">
+        <form id="loginform" class="form-vertical no-padding no-margin" action="index.html">
+            <p class="center">输入用户名和密码.</p>
+            <div class="control-group">
+                <div class="controls">
+                    <div class="input-prepend">
+                        <span class="add-on"><i class="icon-sitemap"></i></span><input name="CompanyNum" type="text" placeholder="公司编码" value="C00001" />
+                    </div>
+                </div>
+            </div>
+            <div class="control-group">
+                <div class="controls">
+                    <div class="input-prepend">
+                        <span class="add-on"><i class="icon-user"></i></span><input name="UserName" type="text" placeholder="用户名" value="administrator" />
+                    </div>
+                </div>
+            </div>
+            <div class="control-group">
+                <div class="controls">
+                    <div class="input-prepend">
+                        <span class="add-on"><i class="icon-lock"></i></span><input name="PassWord" type="password" placeholder="密码" value="000000"/>
+                    </div>
+                </div>
+            </div>
+            <div class="control-group remember-me">
+                <div class="controls">
+                    <label class="checkbox">
+                        <input type="checkbox" name="remember" value="1" /> 记住密码
+                    </label>
+                    <a href="javascript:;" class="pull-right" id="forget-password">忘记密码?</a>
+                </div>
+            </div>
+            <input type="button" id="login-btn" class="btn btn-block btn-inverse" value="登录" />
+        </form>
+        <form id="forgotform" class="form-vertical no-padding no-margin hide" action="index.html">
+            <p class="center">输入您的邮箱重置密码.</p>
+            <div class="control-group">
+                <div class="controls">
+                    <div class="input-prepend">
+                        <span class="add-on"><i class="icon-envelope"></i></span><input id="input-email" type="text" placeholder="邮箱" />
+                    </div>
+                </div>
+                <div class="space10"></div>
+            </div>
+            <input type="button" id="forget-btn" class="btn btn-block btn-inverse" value="确定" />
+            <input type="hidden" id="hdReturnUrl" value="@ViewBag.ReturnUrl"/>
+        </form>
+    </div>
+    <div id="login-copyright">
+        2018 &copy; 吉特仓储管理系统-V4.0
+    </div>
+    <script src="/Theme/assets/plugins/jquery-1.8.3.min.js" type="text/javascript"></script>
+    <script src="/Theme/assets/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="/Theme/assets/plugins/jbox-v2.3/jBox/jquery.jBox-2.3.min.js"></script>
+    <!--[if lt IE 9]>
+    <script src="/Theme/assets/plugins/excanvas.js"></script>
+    <script src="/Theme/assets/plugins/respond.js"></script>
+    <![endif]-->
+    <script src="/Theme/assets/plugins/breakpoints/breakpoints.js"></script>
+    <script src="/Theme/customer/Git.Framework.Common.js"></script>
+    <script src="/Theme/customer/Git.Framework.UICommon.js"></script>
+    <script src="/Theme/assets/plugins/uniform/jquery.uniform.min.js" type="text/javascript"></script>
+
+    <script src="/Theme/assets/scripts/app.js"></script>
+    <script src="/Theme/assets/scripts/login.js"></script>
+
+    <script>
+        jQuery(document).ready(function () {
+            App.init();
+            Login.init();
+        });
+    </script>
+</body>
+</html>

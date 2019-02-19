@@ -1,0 +1,23 @@
+﻿@{
+    Layout = null;
+}
+
+<div class="form-horizontal">
+    <br/>
+    <div class="control-group">
+        <label class="control-label dialogtitle">部门名</label>
+        <div class="controls dialogcontent">
+            <input type="text" name="DepartName" placeholder="" class="input-medium" value="@ViewBag.Entity.DepartName">
+            <input type="hidden" name="DepartNum" value="@ViewBag.Entity.DepartNum">
+            <input type="hidden" name="SnNum" value="@ViewBag.Entity.SnNum">
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label dialogtitle">上级部门</label>
+        <div class="controls dialogcontent">
+            <select class="input-medium" name="ParentNum" style="width:165px;">
+                @Html.Raw(ViewBag.DepartList)
+            </select>
+        </div>
+    </div>
+</div>

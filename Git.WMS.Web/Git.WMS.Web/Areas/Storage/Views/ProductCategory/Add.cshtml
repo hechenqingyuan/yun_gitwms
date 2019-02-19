@@ -1,0 +1,35 @@
+﻿@{
+    Layout = null;
+}
+
+
+<div class="form-horizontal">
+    <br/>
+    <div class="control-group">
+        <label class="control-label dialogtitle">类别编号</label>
+        <div class="controls dialogcontent">
+            <input type="text" name="CateNum" placeholder="可不填,自动生成" disabled="disabled" class="input-medium" value="@ViewBag.Entity.CateNum">
+            <input type="hidden" name="SnNum" value="@ViewBag.Entity.SnNum">
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label dialogtitle">类别名称</label>
+        <div class="controls dialogcontent">
+            <input type="text" name="CateName" placeholder="" class="input-medium" value="@ViewBag.Entity.CateName">
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label dialogtitle">上级类别</label>
+        <div class="controls dialogcontent">
+            <select class="input-medium" name="ParentNum" style="width:165px;">
+                @Html.Raw(ViewBag.ParentNum)
+            </select>
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label dialogtitle">备注</label>
+        <div class="controls dialogcontent">
+            <input type="text" name="Remark" placeholder="" class="input-medium" value="@ViewBag.Entity.Remark">
+        </div>
+    </div>
+</div>

@@ -1,0 +1,79 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+    @Html.Partial("_PageTitle")
+</head>
+<body class="fixed-top">
+
+    @Html.Partial("_Header")
+
+    <div id="container" class="row-fluid @ViewBag.MenuStatus">
+        @Html.Partial("_Sidebar")
+
+        <div id="body">
+            <div id="widget-config" class="modal hide">
+                <div class="modal-header">
+                    <button data-dismiss="modal" class="close" type="button">×</button>
+                    <h3>Widget Settings</h3>
+                </div>
+                <div class="modal-body">
+                    <p>Here will be a configuration form</p>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row-fluid">
+                    <div class="span12">
+                        @Html.Raw(ViewBag.NavMenu)
+                    </div>
+                </div>
+                <div class="row-fluid">
+                    <div class="span12">
+                        <div class="widget box light-grey">
+                            <div class="widget-title">
+                                <h4><i class="icon-globe"></i>库存清单</h4>
+                                <div class="actions toolbar">
+                                    <a class="btn btn-info" href="javascript:void(0)" data-command="Excel"><i class="icon-download"></i>&nbsp;导出</a>
+                                </div>
+                            </div>
+                            <div class="widget-body">
+                                <div class="row-fluid">
+                                    <form class="form-horizontal" action="javascript:void(0)">
+                                        <div class="control-group">
+                                            <div data-condition="search">
+                                                产品名称:<input type="text" name="ProductName" class="input-medium" placeholder="请输入产品名称" />
+                                                产品编号:<input type="text" name="BarCode" class="input-medium" placeholder="请输入产品编号" />
+                                                产品批次:<input type="text" name="BatchNum" class="input-medium" placeholder="请输入产品批次" />
+                                                仓库:<select class="input-medium" name="StorageNum">@Html.Raw(ViewBag.StorageNum)</select>
+                                                <a class="btn btn-info" href="javascript:void(0)" data-command="search"><i class="icon-search"></i>&nbsp;搜索</a>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="row-fluid" id="tabList"></div>
+                                <div id="mypager" class="row-fluid" style="vertical-align:top;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @Html.Partial("_Foot")
+    <script src="/Theme/customer/Report/Git.Framework.Report.Store.js"></script>
+    <script>
+        jQuery(document).ready(function () {
+            App.init();
+            StoreReport.Init();
+        });
+    </script>
+</body>
+</html>

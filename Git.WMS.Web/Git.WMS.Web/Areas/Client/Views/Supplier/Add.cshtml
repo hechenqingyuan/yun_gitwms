@@ -1,0 +1,98 @@
+﻿@{
+    Layout = null;
+}
+
+
+<div class="form-horizontal">
+    <br/>
+    <div class="row-fluid">
+        <div class="span6">
+            <div class="control-group">
+                <label class="control-label dialogtitle" for="firstName">编号</label>
+                <div class="controls dialogcontent">
+                    <input type="text" name="SupNum" class="input-medium" placeholder="" value="@ViewBag.Entity.SupNum">
+                    <input type="hidden" name="SnNum" class="input-medium" placeholder="" value="@ViewBag.Entity.SnNum">
+                </div>
+            </div>
+        </div>
+        
+        <div class="span6">
+            <div class="control-group">
+                <label class="control-label dialogtitle" for="lastName">供应商名称</label>
+                <div class="controls dialogcontent">
+                    <input type="text" name="SupName" class="input-medium" placeholder="" value="@ViewBag.Entity.SupName">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span6">
+            <div class="control-group">
+                <label class="control-label dialogtitle" for="firstName">供应商类别</label>
+                <div class="controls dialogcontent">
+                    <select class="input-medium" name="SupType" style="width:165px;">
+                        @Html.Raw(ViewBag.SupplierType)
+                    </select>
+                </div>
+            </div>
+        </div>
+        
+        <div class="span6">
+            <div class="control-group">
+                <label class="control-label dialogtitle" for="lastName">电话</label>
+                <div class="controls dialogcontent">
+                    <input type="text" name="Phone" class="input-medium" placeholder="" value="@ViewBag.Entity.Phone">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span6">
+            <div class="control-group">
+                <label class="control-label dialogtitle" for="firstName">传真</label>
+                <div class="controls dialogcontent">
+                    <input type="text" name="Fax" class="input-medium" placeholder="" value="@ViewBag.Entity.Fax">
+                </div>
+            </div>
+        </div>
+        
+        <div class="span6">
+            <div class="control-group">
+                <label class="control-label dialogtitle" for="lastName">邮箱</label>
+                <div class="controls dialogcontent">
+                    <input type="text" name="Email" class="input-medium" placeholder="" value="@ViewBag.Entity.Email">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span6">
+            <div class="control-group">
+                <label class="control-label dialogtitle" for="firstName">联系人</label>
+                <div class="controls dialogcontent">
+                    <input type="text" name="ContactName" class="input-medium" placeholder="" value="@ViewBag.Entity.ContactName">
+                </div>
+            </div>
+        </div>
+        
+        <div class="span6">
+            <div class="control-group">
+                <label class="control-label dialogtitle" for="lastName">地址</label>
+                <div class="controls dialogcontent">
+                    <input type="text" name="Address" class="input-medium" placeholder="" value="@ViewBag.Entity.Address">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span12">
+            <div class="control-group">
+                <label class="control-label dialogtitle" for="firstName">描述</label>
+                <div class="controls dialogcontent">
+                    <input type="text" name="Description" class="input-medium" style="width:485px;" placeholder="" value="@ViewBag.Entity.Description">
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>

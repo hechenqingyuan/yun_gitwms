@@ -1,0 +1,20 @@
+﻿@{
+    Layout = null;
+}
+
+<div class="form-horizontal">
+    <br/>
+    <div class="control-group">
+        <label class="control-label dialogtitle">类别编号</label>
+        <div class="controls dialogcontent">
+            <input type="text" name="CateNum" placeholder="自动生成,可不填" class="input-medium" value="@ViewBag.Entity.CateNum" disabled="disabled">
+            <input type="hidden" name="SnNum" value="@ViewBag.Entity.SnNum">
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label dialogtitle">类别名称</label>
+        <div class="controls dialogcontent">
+            <input type="text" name="CateName" placeholder="" class="input-medium" value="@ViewBag.Entity.CateName">
+        </div>
+    </div>
+</div>

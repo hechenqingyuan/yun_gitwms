@@ -1,0 +1,45 @@
+﻿@{
+    Layout = null;
+}
+
+<div class="widget box light-grey">
+    <div class="widget-body">
+        <div class="dataTables_wrapper form-inline">
+            <div class="row-fluid">
+                <div class="span12 search">
+                    <label>产品编码: <input type="text" name="BarCode" class="input-medium"></label>
+                    <label>产品名称: <input type="text" name="ProductName" class="input-medium"></label>
+                    <label>
+                        库位:
+                        <select class="input-medium" name="LocalNum">
+                            @Html.Raw(ViewBag.Location)
+                        </select>
+                    </label>
+                    <button class="btn btn-primary" data-command="Search">搜索</button>
+                </div>
+            </div>
+            <div class="row-fluid" id="tabInfo"></div>
+            @*<table class="table table-striped table-bordered table-hover" id="tabInfo">
+                <thead>
+                    <tr>
+                        <th>
+                            <input type="checkbox" name="item_all" />
+                        </th>
+                        <th>产品名称</th>
+                        <th>产品编码</th>
+                        <th>批次</th>
+                        <th>库位</th>
+                        <th>现有库存</th>
+                        <th>移库数</th>
+                        <th>移入库位</th>
+                    </tr>
+                </thead>
+            </table>*@
+
+            <div id="myMinPager" class="row-fluid" style="vertical-align:top;">
+
+            </div>
+
+        </div>
+    </div>
+</div>

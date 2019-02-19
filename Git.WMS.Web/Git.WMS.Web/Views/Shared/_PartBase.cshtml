@@ -1,0 +1,445 @@
+﻿@using Git.Storage.Entity.Sys
+@using Git.WMS.Web.Lib
+@{
+    List<SysResourceEntity> ListResult = ViewBag.ListResult;
+}
+
+<form class="form-horizontal">
+    <div class="row-fluid">
+        <div class="span1 ">
+            <label class="checkbox inline">
+                <strong>仓库管理</strong>
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Base_2000") 仓库列表
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Base_3000") 新增/编辑仓库
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Base_3001") 查询仓库
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Base_3002") 保存仓库
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Base_3003") 删除仓库
+            </label>
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span1 ">
+            <label class="checkbox inline">
+                <strong>&nbsp;</strong>
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Base_3004") 导出Excel
+            </label>
+        </div>
+    </div>
+
+
+
+    <!--库位管理-->
+    <div class="row-fluid">
+        <div class="span1 ">
+            <label class="checkbox inline">
+                <strong>库位管理</strong>
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Base_2001") 库位列表
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Base_3100") 新增/编辑库位
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Base_3101") 查询库位
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Base_3102") 保存库位
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Base_3103") 删除库位
+            </label>
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span1 ">
+            <label class="checkbox inline">
+                <strong>&nbsp;</strong>
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Base_3104") 导出Excel
+            </label>
+        </div>
+    </div>
+
+
+
+    <!--设备管理-->
+    <div class="row-fluid">
+        <div class="span1 ">
+            <label class="checkbox inline">
+                <strong>设备管理</strong>
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Base_2002") 设备列表
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Base_3200") 新增/编辑设备
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Base_3201") 查询设备
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Base_3202") 保存设备
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Base_3203") 删除设备
+            </label>
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span1 ">
+            <label class="checkbox inline">
+                <strong>&nbsp;</strong>
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Base_3204") 导出Excel
+            </label>
+        </div>
+    </div>
+
+
+    <!--供应商管理-->
+    <div class="row-fluid">
+        <div class="span1 ">
+            <label class="checkbox inline">
+                <strong>供应商管理</strong>
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Base_2003") 供应商列表
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Base_3300") 新增/编辑供应商
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Base_3301") 查询供应商
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Base_3302") 保存供应商
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Base_3303") 删除供应商
+            </label>
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span1 ">
+            <label class="checkbox inline">
+                <strong>&nbsp;</strong>
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Base_3304") 导出Excel
+            </label>
+        </div>
+    </div>
+
+
+
+    <!--客户管理-->
+    <div class="row-fluid">
+        <div class="span1 ">
+            <label class="checkbox inline">
+                <strong>客户管理</strong>
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Base_2004") 客户列表
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Base_3400") 新增/编辑客户
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Base_3401") 查询客户
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Base_3402") 保存客户
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Base_3403") 删除客户
+            </label>
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span1 ">
+            <label class="checkbox inline">
+                <strong>&nbsp;</strong>
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Base_3404") 导出Excel
+            </label>
+        </div>
+    </div>
+
+
+
+
+    <!--计量单位管理-->
+    <div class="row-fluid">
+        <div class="span1 ">
+            <label class="checkbox inline">
+                <strong>单位管理</strong>
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Base_2005") 单位列表
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Base_3500") 新增/编辑单位
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Base_3501") 查询单位
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Base_3502") 保存单位
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Base_3503") 删除单位
+            </label>
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span1 ">
+            <label class="checkbox inline">
+                <strong>&nbsp;</strong>
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Base_3504") 导出Excel
+            </label>
+        </div>
+    </div>
+
+
+
+
+    <!--产品分类管理-->
+    <div class="row-fluid">
+        <div class="span1 ">
+            <label class="checkbox inline">
+                <strong>分类管理</strong>
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Base_2006") 分类列表
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Base_3600") 新增/编辑分类
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Base_3601") 查询分类
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Base_3602") 保存分类
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Base_3603") 删除分类
+            </label>
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span1 ">
+            <label class="checkbox inline">
+                <strong>&nbsp;</strong>
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Base_3604") 导出Excel
+            </label>
+        </div>
+    </div>
+
+
+
+
+    <!--产品管理-->
+    <div class="row-fluid">
+        <div class="span1 ">
+            <label class="checkbox inline">
+                <strong>产品管理</strong>
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Base_2007") 产品列表
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Base_3700") 新增/编辑产品
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Base_3701") 查询产品
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Base_3702") 保存产品
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Base_3703") 删除产品
+            </label>
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span1 ">
+            <label class="checkbox inline">
+                <strong>&nbsp;</strong>
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Base_3704") 导出Excel
+            </label>
+        </div>
+    </div>
+
+
+
+
+
+    <!--承运商管理-->
+    <div class="row-fluid">
+        <div class="span1 ">
+            <label class="checkbox inline">
+                <strong>承运商管理</strong>
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Base_2009") 承运商列表
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Base_3900") 新增(编辑)承运商
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Base_3901") 查询承运商
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Base_3902") 保存承运商
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Base_3903") 删除承运商
+            </label>
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span1 ">
+            <label class="checkbox inline">
+                <strong>&nbsp;</strong>
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Base_3904") 导出Excel
+            </label>
+        </div>
+    </div>
+</form>
+
+<div class="form-actions">
+    <button type="button" class="btn btn-primary" data-command="Save"><i class="icon-ok"></i> 保存</button>
+    <button type="button" class="btn" data-command="Cancel">取消</button>
+</div>

@@ -1,0 +1,33 @@
+﻿@{
+    Layout = null;
+}
+
+<div class="form-horizontal">
+    <br/>
+    <div class="control-group">
+        <label class="control-label dialogtitle">联系人</label>
+        <div class="controls dialogcontent">
+            <input type="text" name="Contact" placeholder="" class="input-large" value="@ViewBag.Entity.Contact">
+            <input type="hidden" name="SnNum" value="@ViewBag.Entity.SnNum">
+            <input type="hidden" name="CustomerSN" value="@ViewBag.Entity.CustomerSN">
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label dialogtitle">地址</label>
+        <div class="controls dialogcontent">
+            <input type="text" name="Address" placeholder="" class="input-large" value="@ViewBag.Entity.Address">
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label dialogtitle">电话</label>
+        <div class="controls dialogcontent">
+            <input type="text" name="Phone" placeholder="" class="input-large" value="@ViewBag.Entity.Phone">
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label dialogtitle">备注</label>
+        <div class="controls dialogcontent">
+            <input type="text" name="Remark" placeholder="" class="input-large" value="@ViewBag.Entity.Remark">
+        </div>
+    </div>
+</div>

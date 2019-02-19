@@ -1,0 +1,210 @@
+﻿@using Git.Storage.Entity.Sys
+@using Git.WMS.Web.Lib
+@{
+    List<SysResourceEntity> ListResult = ViewBag.ListResult;
+}
+
+<form class="form-horizontal">
+    <div class="row-fluid">
+        <div class="span1 ">
+            <label class="checkbox inline">
+                <strong>财务类别</strong>
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Fin_2000") 类别列表
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Fin_3000") 新增(编辑)财务类别
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Fin_3001") 查询财务类别
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Fin_3002") 保存财务类别
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Fin_3003") 删除财务类别
+            </label>
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span1 ">
+            <label class="checkbox inline">
+                <strong>&nbsp;</strong>
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Fin_3004") 导出Excel
+            </label>
+        </div>
+    </div>
+
+
+
+    <div class="row-fluid">
+        <div class="span1 ">
+            <label class="checkbox inline">
+                <strong>应收管理</strong>
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Fin_2001") 应收列表
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Fin_3100") 新增(编辑)应收
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Fin_3101") 查询应收
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Fin_3102") 保存应收
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Fin_3103") 删除应收
+            </label>
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span1 ">
+            <label class="checkbox inline">
+                <strong>&nbsp;</strong>
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Fin_3104") 导出Excel
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Fin_3105") 审核
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Fin_3106") 新增付款
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Fin_3107") 保存付款
+            </label>
+        </div>
+    </div>
+
+
+
+
+    <div class="row-fluid">
+        <div class="span1 ">
+            <label class="checkbox inline">
+                <strong>应付管理</strong>
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Fin_2002") 应付列表
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Fin_3200") 新增(编辑)应付
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Fin_3201") 查询应付
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Fin_3202") 保存应付
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Fin_3203") 删除应付
+            </label>
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span1 ">
+            <label class="checkbox inline">
+                <strong>&nbsp;</strong>
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Fin_3204") 导出Excel
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Fin_3205") 审核
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Fin_3206") 新增付款
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Fin_3207") 保存付款
+            </label>
+        </div>
+    </div>
+
+
+
+
+
+
+    <div class="row-fluid">
+        <div class="span1 ">
+            <label class="checkbox inline">
+                <strong>财务记账</strong>
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Fin_2003") 财务记账
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Fin_3301") 查询记账
+            </label>
+        </div>
+        <div class="span2">
+            <label class="checkbox inline">
+                @Html.RoleCheckBox(ListResult, "Fin_3302") 导出Excel
+            </label>
+        </div>
+    </div>
+</form>
+
+<div class="form-actions">
+    <button type="button" class="btn btn-primary" data-command="Save"><i class="icon-ok"></i> 保存</button>
+    <button type="button" class="btn" data-command="Cancel">取消</button>
+</div>

@@ -1,0 +1,130 @@
+﻿@using Git.Storage.Entity.Sys
+@using Git.WMS.Web.Lib
+@{
+    Layout = null;
+    List<SysResourceEntity> ListResult = ViewBag.ListResult;
+}
+
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+    @Html.Partial("_PageTitle")
+</head>
+<body class="fixed-top">
+    @Html.Partial("_Header")
+    <div id="container" class="row-fluid @ViewBag.MenuStatus">
+        @Html.Partial("_Sidebar")
+
+        <div id="body">
+            <div id="widget-config" class="modal hide">
+                <div class="modal-header">
+                    <button data-dismiss="modal" class="close" type="button">×</button>
+                    <h3>Widget Settings</h3>
+                </div>
+                <div class="modal-body">
+                    <p>Here will be a configuration form</p>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row-fluid">
+                    <div class="span12">
+                        @Html.Raw(ViewBag.NavMenu)
+                    </div>
+                </div>
+
+
+
+                <div id="page">
+                    <div class="row-fluid">
+                        <div class="span12">
+                            <div class="tabbable tabbable-custom boxless">
+                                <ul class="nav nav-tabs">
+                                    <li class="active"><a href="#tab_1" data-toggle="tab">系统设置</a></li>
+                                    <li class=""><a class="advance_form_with_chosen_element" href="#tab_2" data-toggle="tab">基本资料</a></li>
+                                    <li class=""><a href="#tab_3" data-toggle="tab">仓库作业</a></li>
+                                    <li><a class="advance_form_with_chosen_element" href="#tab_4" data-toggle="tab">业务操作</a></li>
+                                    <li><a class="advance_form_with_chosen_element" href="#tab_5" data-toggle="tab">财务管理</a></li>
+                                    <li><a class="advance_form_with_chosen_element" href="#tab_6" data-toggle="tab">报表管理</a></li>
+                                </ul>
+                                <input type="hidden" name="RoleNum" value="@ViewBag.RoleNum" />
+                                <div class="tab-content">
+                                    <!--系统设置-->
+                                    <div class="tab-pane active" id="tab_1">
+                                        <div class="widget">
+                                            <div class="widget-body form">
+                                                @Html.Partial("_PartSys")
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--基本资料-->
+                                    <div class="tab-pane" id="tab_2">
+                                        <div class="widget">
+                                            <div class="widget-body form">
+                                                @Html.Partial("_PartBase")
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--仓库作业-->
+                                    <div class="tab-pane" id="tab_3">
+                                        <div class="widget">
+                                            <div class="widget-body form">
+                                                @Html.Partial("_PartStorage")
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--业务管理-->
+                                    <div class="tab-pane" id="tab_4">
+                                        <div class="widget">
+                                            <div class="widget-body form">
+                                                @Html.Partial("_PartPO")
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--财务管理-->
+                                    <div class="tab-pane" id="tab_5">
+                                        <div class="widget">
+                                            <div class="widget-body form">
+                                                @Html.Partial("_PartFinance")
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--报表管理-->
+                                    <div class="tab-pane" id="tab_6">
+                                        <div class="widget">
+                                            <div class="widget-body form">
+                                                <div class="widget-body form">
+                                                    @Html.Partial("_PartReport")
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END PAGE CONTENT-->
+                </div>
+
+            </div>
+        </div>
+    </div>
+    @Html.Partial("_Foot")
+    <script src="/Theme/customer/Base/Git.Storage.SysRes.js"></script>
+    <script>
+        jQuery(document).ready(function () {
+            App.init();
+
+            $("button[data-command='Save']").click(function () {
+                SysResManager.SavePower();
+            });
+
+            $("button[data-command='Cancel']").hide();
+        });
+    </script>
+</body>
+</html>

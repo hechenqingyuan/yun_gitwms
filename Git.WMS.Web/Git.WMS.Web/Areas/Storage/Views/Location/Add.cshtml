@@ -1,0 +1,94 @@
+﻿@{
+    Layout = null;
+}
+
+
+<div class="form-horizontal">
+    <br/>
+    <div class="row-fluid">
+        <div class="span6">
+            <div class="control-group">
+                <label class="control-label dialogtitle" for="firstName">库位编号</label>
+                <div class="controls dialogcontent">
+                    <input type="text" name="LocalBarCode" class="input-medium" placeholder="可不填,自动生成" value="@ViewBag.Entity.LocalBarCode">
+                    <input type="hidden" name="LocalNum" class="input-medium" placeholder="" value="@ViewBag.Entity.LocalNum">
+                </div>
+            </div>
+        </div>
+        
+        <div class="span6">
+            <div class="control-group">
+                <label class="control-label dialogtitle" for="lastName">库位名称</label>
+                <div class="controls dialogcontent">
+                    <input type="text" name="LocalName" class="input-medium" placeholder="" value="@ViewBag.Entity.LocalName">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span6">
+            <div class="control-group">
+                <label class="control-label dialogtitle" for="firstName">库位类型</label>
+                <div class="controls dialogcontent">
+                    <select class="input-medium" name="LocalType" style="width:165px;">
+                        @Html.Raw(ViewBag.LocalType)
+                    </select>
+                </div>
+            </div>
+        </div>
+        
+        <div class="span6">
+            <div class="control-group">
+                <label class="control-label dialogtitle" for="lastName">仓库</label>
+                <div class="controls dialogcontent">
+                    <select class="input-medium" name="StorageNum" style="width:165px;">
+                        @Html.Raw(ViewBag.Storage)
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span6">
+            <div class="control-group">
+                <label class="control-label dialogtitle" for="firstName">是否默认</label>
+                <div class="controls dialogcontent">
+                    @if (ViewBag.Entity.IsDefault == (int)Git.Storage.Common.Enum.EBool.Yes)
+                    {
+                        <input type="checkbox" checked="checked" name="IsDefault"/>
+                    }
+                    else
+                    { 
+                        <input type="checkbox" name="IsDefault"/>
+                    }
+                </div>
+            </div>
+        </div>
+        
+        <div class="span6">
+            <div class="control-group">
+                <label class="control-label dialogtitle" for="lastName">是否禁用</label>
+                <div class="controls dialogcontent">
+                    @if (ViewBag.Entity.IsForbid == (int)Git.Storage.Common.Enum.EBool.Yes)
+                    {
+                        <input type="checkbox" checked="checked" name="IsForbid" />
+                    }
+                    else
+                    {
+                        <input type="checkbox" name="IsForbid" />
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span6">
+            <div class="control-group">
+                <label class="control-label dialogtitle" for="firstName">备注</label>
+                <div class="controls dialogcontent">
+                    <input type="text" name="Remark" style="width:490px;" class="input-medium" placeholder="" value="@ViewBag.Entity.Remark">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

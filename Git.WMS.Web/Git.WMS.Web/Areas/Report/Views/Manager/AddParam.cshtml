@@ -1,0 +1,54 @@
+﻿@{
+    Layout = null;
+}
+
+<div class="form-horizontal">
+    <br/>
+    <div class="control-group">
+        <label class="control-label dialogtitle">参数名</label>
+        <div class="controls dialogcontent">
+            <input name="ParamName" type="text" placeholder="输入带@前缀的参数" class="input-large" value="@ViewBag.Entity.ParamName"/>
+            <input name="SnNum" type="hidden" placeholder="" class="input-large" value="@ViewBag.Entity.SnNum"/>
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label dialogtitle">显示名</label>
+        <div class="controls dialogcontent">
+            <input name="ShowName" type="text" placeholder="" class="input-large"  value="@ViewBag.Entity.ShowName"/>
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label dialogtitle">数据类型</label>
+        <div class="controls dialogcontent">
+            <select class="input-large" name="ParamType" style="width:225px;">
+                @Html.Raw(ViewBag.ParamType)
+            </select>
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label dialogtitle">可选值</label>
+        <div class="controls dialogcontent">
+            <input name="ParamData" type="text" placeholder="" class="input-large" value="@ViewBag.Entity.ParamData"/>
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label dialogtitle">默认值</label>
+        <div class="controls dialogcontent">
+            <input name="DefaultValue" type="text" placeholder="" class="input-large" value="@ViewBag.Entity.DefaultValue"/>
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label dialogtitle">显示元素</label>
+        <div class="controls dialogcontent">
+            <select class="input-large" name="ParamElement" style="width:225px;">
+                @Html.Raw(ViewBag.ParamElement)
+            </select>
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label dialogtitle">备注</label>
+        <div class="controls dialogcontent">
+            <input name="Remark" type="text" placeholder="" class="input-large" value="@ViewBag.Entity.Remark"/>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,23 @@
+﻿@{
+    Layout = null;
+}
+
+
+
+<div class="form-horizontal">
+    <br/>
+    <div class="control-group">
+        <label class="control-label dialogtitle">角色名</label>
+        <div class="controls dialogcontent">
+            <input type="text" name="RoleName" placeholder="" class="input-medium" value="@ViewBag.Entity.RoleName">
+            <input type="hidden" name="RoleNum" value="@ViewBag.Entity.RoleNum">
+            <input type="hidden" name="SnNum" value="@ViewBag.Entity.SnNum">
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label dialogtitle">备注</label>
+        <div class="controls dialogcontent">
+            <input type="text" name="Remark" placeholder="" class="input-medium" value="@ViewBag.Entity.Remark">
+        </div>
+    </div>
+</div>

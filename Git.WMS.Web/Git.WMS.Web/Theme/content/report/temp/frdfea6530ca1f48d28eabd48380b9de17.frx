@@ -1,0 +1,34 @@
+﻿﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReportInfo.Created="04/27/2016 13:38:11" ReportInfo.Modified="04/27/2016 13:38:12" ReportInfo.CreatorVersion="2015.3.7.0">
+  <Dictionary>
+    <TableDataSource Name="Table" ReferenceName="Data.Table" DataType="System.Int32" Enabled="true"/>
+  </Dictionary>
+  <ReportPage Name="Page1">
+    <ReportTitleBand Name="ReportTitle1" Width="718.2" Height="170.08">
+      <TableObject Name="Table1" Width="198.45" Height="56.7">
+        <TableColumn Name="Column1"/>
+        <TableColumn Name="Column2"/>
+        <TableColumn Name="Column3"/>
+        <TableRow Name="Row1">
+          <TableCell Name="Cell1" Padding="2, 0, 2, 0"/>
+          <TableCell Name="Cell2" Padding="2, 0, 2, 0"/>
+          <TableCell Name="Cell3" Padding="2, 0, 2, 0"/>
+        </TableRow>
+        <TableRow Name="Row2">
+          <TableCell Name="Cell4" Padding="2, 0, 2, 0"/>
+          <TableCell Name="Cell5" Padding="2, 0, 2, 0"/>
+          <TableCell Name="Cell6" Padding="2, 0, 2, 0"/>
+        </TableRow>
+        <TableRow Name="Row3">
+          <TableCell Name="Cell7" Padding="2, 0, 2, 0"/>
+          <TableCell Name="Cell8" Padding="2, 0, 2, 0"/>
+          <TableCell Name="Cell9" Padding="2, 0, 2, 0"/>
+        </TableRow>
+      </TableObject>
+      <BarcodeObject Name="Barcode1" Left="160.65" Top="66.15" Width="145" Height="85.05"/>
+    </ReportTitleBand>
+    <PageHeaderBand Name="PageHeader1" Width="718.2" Height="170.08"/>
+    <DataBand Name="Data1" Width="718.2" Height="217.32"/>
+    <PageFooterBand Name="PageFooter1" Width="718.2" Height="170.08"/>
+  </ReportPage>
+</Report>

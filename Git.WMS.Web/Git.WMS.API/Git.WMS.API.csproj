@@ -1,0 +1,374 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CF8380DC-F18C-4FB9-9B77-7B1E864794C3}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Git.WMS.API</RootNamespace>
+    <AssemblyName>Git.WMS.API</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <Use64BitIISExpress />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Git.Framework.Cache">
+      <HintPath>..\..\Lib\Git.Framework.Cache.dll</HintPath>
+    </Reference>
+    <Reference Include="Git.Framework.Controller4">
+      <HintPath>..\..\Lib\Git.Framework.Controller4.dll</HintPath>
+    </Reference>
+    <Reference Include="Git.Framework.DataTypes, Version=2.0.5908.14839, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Lib\Git.Framework.DataTypes.dll</HintPath>
+    </Reference>
+    <Reference Include="Git.Framework.Events">
+      <HintPath>..\..\Lib\Git.Framework.Events.dll</HintPath>
+    </Reference>
+    <Reference Include="Git.Framework.Io, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Lib\Git.Framework.Io.dll</HintPath>
+    </Reference>
+    <Reference Include="Git.Framework.Log, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Lib\Git.Framework.Log.dll</HintPath>
+    </Reference>
+    <Reference Include="Git.Framework.MsSql, Version=2.0.5730.33522, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Lib\Git.Framework.MsSql.dll</HintPath>
+    </Reference>
+    <Reference Include="Git.Framework.ORM, Version=2.0.5414.27196, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Lib\Git.Framework.ORM.dll</HintPath>
+    </Reference>
+    <Reference Include="Git.Framework.Resource">
+      <HintPath>..\..\Lib\Git.Framework.Resource.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Caching, Version=5.0.414.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Lib\Microsoft.Practices.EnterpriseLibrary.Caching.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=4.1.0.0, Culture=neutral, PublicKeyToken=e44a2bc38ed2c13c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Lib\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data, Version=5.0.414.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Lib\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Logging, Version=4.1.0.0, Culture=neutral, PublicKeyToken=e44a2bc38ed2c13c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Lib\Microsoft.Practices.EnterpriseLibrary.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ObjectBuilder, Version=1.0.51206.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Lib\Microsoft.Practices.ObjectBuilder.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=1.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Lib\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.8.0.2\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Mvc.FixedDisplayModes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.FixedDisplayModes.1.0.0\lib\net40\Microsoft.Web.Mvc.FixedDisplayModes.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Net.Http.2.0.30506.0\lib\net40\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.30506.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Net.Http.2.0.30506.0\lib\net40\System.Net.Http.WebRequest.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.30506.0\lib\net40\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.30506.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.30506.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.30506.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Areas\Biz\BizAreaRegistration.cs" />
+    <Compile Include="Areas\Biz\Controllers\PurchaseController.cs" />
+    <Compile Include="Areas\Biz\Controllers\PurchaseReturnController.cs" />
+    <Compile Include="Areas\Biz\Controllers\SaleController.cs" />
+    <Compile Include="Areas\Biz\Controllers\SaleReturnController.cs" />
+    <Compile Include="Areas\Finance\Controllers\BillController.cs" />
+    <Compile Include="Areas\Finance\Controllers\CateController.cs" />
+    <Compile Include="Areas\Finance\Controllers\PayController.cs" />
+    <Compile Include="Areas\Finance\FinanceAreaRegistration.cs" />
+    <Compile Include="Areas\Order\Controllers\AllocateController.cs" />
+    <Compile Include="Areas\Order\Controllers\BadController.cs" />
+    <Compile Include="Areas\Order\Controllers\CheckController.cs" />
+    <Compile Include="Areas\Order\Controllers\InStorageController.cs" />
+    <Compile Include="Areas\Order\Controllers\MoveController.cs" />
+    <Compile Include="Areas\Order\Controllers\OutStorageController.cs" />
+    <Compile Include="Areas\Order\OrderAreaRegistration.cs" />
+    <Compile Include="Areas\Report\Controllers\BalanceBookController.cs" />
+    <Compile Include="Areas\Report\Controllers\ManagerController.cs" />
+    <Compile Include="Areas\Report\ReportAreaRegistration.cs" />
+    <Compile Include="Areas\Storage\Controllers\LocalProductController.cs" />
+    <Compile Include="Areas\Storage\StorageAreaRegistration.cs" />
+    <Compile Include="Areas\Store\Controllers\CapacityController.cs" />
+    <Compile Include="Areas\Store\Controllers\WarnController.cs" />
+    <Compile Include="Areas\Store\StoreAreaRegistration.cs" />
+    <Compile Include="Areas\Sys\Controllers\CarrierController.cs" />
+    <Compile Include="Areas\Sys\Controllers\CompanyController.cs" />
+    <Compile Include="Areas\Sys\Controllers\CustomerController.cs" />
+    <Compile Include="Areas\Sys\Controllers\DepartController.cs" />
+    <Compile Include="Areas\Sys\Controllers\EquipmentController.cs" />
+    <Compile Include="Areas\Sys\Controllers\InventoryController.cs" />
+    <Compile Include="Areas\Sys\Controllers\LocationController.cs" />
+    <Compile Include="Areas\Sys\Controllers\MeasureController.cs" />
+    <Compile Include="Areas\Sys\Controllers\ProductCategoryController.cs" />
+    <Compile Include="Areas\Sys\Controllers\ProductController.cs" />
+    <Compile Include="Areas\Sys\Controllers\RoleController.cs" />
+    <Compile Include="Areas\Sys\Controllers\SequenceController.cs" />
+    <Compile Include="Areas\Sys\Controllers\SkuController.cs" />
+    <Compile Include="Areas\Sys\Controllers\StorageController.cs" />
+    <Compile Include="Areas\Sys\Controllers\SupplierController.cs" />
+    <Compile Include="Areas\Sys\Controllers\SysResourceController.cs" />
+    <Compile Include="Areas\Sys\Controllers\UserController.cs" />
+    <Compile Include="Areas\Sys\SysAreaRegistration.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Content Include="Global.asax" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Areas\Biz\Models\" />
+    <Folder Include="Areas\Biz\Views\Shared\" />
+    <Folder Include="Areas\Finance\Models\" />
+    <Folder Include="Areas\Finance\Views\Shared\" />
+    <Folder Include="Areas\Order\Models\" />
+    <Folder Include="Areas\Order\Views\Shared\" />
+    <Folder Include="Areas\Report\Models\" />
+    <Folder Include="Areas\Report\Views\Shared\" />
+    <Folder Include="Areas\Storage\Models\" />
+    <Folder Include="Areas\Storage\Views\Shared\" />
+    <Folder Include="Areas\Store\Models\" />
+    <Folder Include="Areas\Store\Views\Shared\" />
+    <Folder Include="Areas\Sys\Views\Shared\" />
+    <Folder Include="Controllers\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Sys\Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Git.Storage.Common\Git.Storage.Common.csproj">
+      <Project>{ff709b32-2923-4113-979a-0146cda2299a}</Project>
+      <Name>Git.Storage.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Git.Storage.DataAccess\Git.Storage.DataAccess.csproj">
+      <Project>{d6b7bba4-331e-4497-8525-015a92d9aac5}</Project>
+      <Name>Git.Storage.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Git.Storage.Entity\Git.Storage.Entity.csproj">
+      <Project>{3aae39f1-5c55-4a3d-9b4c-84ec3d3a1072}</Project>
+      <Name>Git.Storage.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Git.Storage.IDataAccess\Git.Storage.IDataAccess.csproj">
+      <Project>{23885116-f1ab-4961-936f-03060404547a}</Project>
+      <Name>Git.Storage.IDataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Git.Storage.Provider\Git.Storage.Provider.csproj">
+      <Project>{28f7a961-3a20-4d73-adaa-0c9309a61ca6}</Project>
+      <Name>Git.Storage.Provider</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Configs\Cache\cache.config" />
+    <Content Include="Configs\Cookie\cookie.config" />
+    <Content Include="Configs\Data\Database.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Areas\Order\Views\Web.config" />
+    <Content Include="Areas\Report\Views\Web.config" />
+    <Content Include="Areas\Storage\Views\Web.config" />
+    <Content Include="Areas\Finance\Views\Web.config" />
+    <Content Include="Areas\Biz\Views\Web.config" />
+    <Content Include="Areas\Store\Views\Web.config" />
+    <None Include="Configs\Data\Database.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Configs\Data\Database.xsx">
+      <DependentUpon>Database.xsd</DependentUpon>
+    </Content>
+    <None Include="Configs\Data\DataOperations.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Configs\Data\DataOperations.xsx">
+      <DependentUpon>DataOperations.xsd</DependentUpon>
+    </Content>
+    <Content Include="Configs\Data\DbCommandFiles.config" />
+    <None Include="Configs\Data\DbCommandFiles.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Configs\Data\DbCommandFiles.xsx">
+      <DependentUpon>DbCommandFiles.xsd</DependentUpon>
+    </Content>
+    <Content Include="Configs\Data\DbCommonCommand.config" />
+    <Content Include="Configs\Data\DbReportCommand.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Configs\FileGroup\FileGroup.config" />
+    <Content Include="Configs\FileValidate\FileVaild.config" />
+    <Content Include="Configs\File\File.config" />
+    <Content Include="Configs\Message\Message.config" />
+    <Content Include="Configs\Pages\Bad-PagesManage.config" />
+    <Content Include="Configs\Pages\Check-PagesManage.config" />
+    <Content Include="Configs\Pages\Client-PagesManage.config" />
+    <Content Include="Configs\Pages\InStorage-PagesManage.config" />
+    <Content Include="Configs\Pages\Move-PagesManage.config" />
+    <Content Include="Configs\Pages\OutStorage-PagesManage.config" />
+    <Content Include="Configs\Pages\PagesManage.config" />
+    <Content Include="Configs\Pages\Product-PagesManage.config" />
+    <Content Include="Configs\Pages\Report-PagesManage.config" />
+    <Content Include="Configs\Pages\Return-PagesManage.config" />
+    <Content Include="Configs\Pages\Store-PagesManage.config" />
+    <Content Include="Configs\SEO\SEO.config" />
+    <Content Include="Configs\Setting\setting.config" />
+    <None Include="Properties\PublishProfiles\WMS.API.pubxml" />
+    <None Include="Properties\PublishProfiles\WMS4.pubxml" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>62162</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://127.0.0.1:8027/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

@@ -1,0 +1,76 @@
+﻿@{
+    Layout = null;
+}
+
+
+<div class="form-horizontal">
+    <br/>
+    <div class="row-fluid">
+        <div class="span6">
+            <div class="control-group">
+                <label class="control-label dialogtitle" for="firstName">设备编号</label>
+                <div class="controls dialogcontent">
+                    <input type="text" name="EquipmentNum" class="input-medium" placeholder="可不填,自动生成" disabled="disabled" value="@ViewBag.Entity.EquipmentNum">
+                    <input type="hidden" name="SnNum" class="input-medium" placeholder="" value="@ViewBag.Entity.SnNum">
+                </div>
+            </div>
+        </div>
+        
+        <div class="span6">
+            <div class="control-group">
+                <label class="control-label dialogtitle" for="lastName">设备名</label>
+                <div class="controls dialogcontent">
+                    <input type="text" name="EquipmentName" class="input-medium" placeholder="" value="@ViewBag.Entity.EquipmentName">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row-fluid">
+        <div class="span6">
+            <div class="control-group">
+                <label class="control-label dialogtitle" for="firstName">授权标识符</label>
+                <div class="controls dialogcontent">
+                    <input type="text" name="Flag" class="input-medium" placeholder="双击生成授权标识符" value="@ViewBag.Entity.Flag">
+                </div>
+            </div>
+        </div>
+        
+        <div class="span6">
+            <div class="control-group">
+                <label class="control-label dialogtitle" for="lastName">是否授权</label>
+                <div class="controls dialogcontent">
+                    @if (ViewBag.Entity.IsImpower == (int)Git.Storage.Common.Enum.EBool.Yes)
+                    {
+                        <input type="checkbox" name="IsImpower" class="input-medium" placeholder="" checked="checked">
+                    }
+                    else
+                    { 
+                        <input type="checkbox" name="IsImpower" class="input-medium" placeholder="" >
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span6">
+            <div class="control-group">
+                <label class="control-label dialogtitle" for="firstName">状态</label>
+                <div class="controls dialogcontent">
+                    <select class="input-medium" name="Status" style="width:165px;">
+                        @Html.Raw(ViewBag.EquipmentStatus)
+                    </select>
+                </div>
+            </div>
+        </div>
+        
+        <div class="span6">
+            <div class="control-group">
+                <label class="control-label dialogtitle" for="lastName">备注</label>
+                <div class="controls dialogcontent">
+                    <input type="text" name="Remark" class="input-medium" placeholder="" value="@ViewBag.Entity.Remark">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

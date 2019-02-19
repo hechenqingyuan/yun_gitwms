@@ -1,0 +1,28 @@
+﻿﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReportInfo.Created="05/09/2016 13:00:41" ReportInfo.Modified="05/09/2016 13:00:41" ReportInfo.CreatorVersion="2015.3.7.0">
+  <Dictionary>
+    <TableDataSource Name="Table" ReferenceName="Data.Table" DataType="System.Int32" Enabled="true">
+      <Column Name="ID" DataType="System.String"/>
+      <Column Name="SnNum" DataType="System.String"/>
+      <Column Name="ReportNum" DataType="System.String"/>
+      <Column Name="ReportName" DataType="System.String"/>
+      <Column Name="ReportType" DataType="System.String"/>
+      <Column Name="Remark" DataType="System.String"/>
+      <Column Name="DataSource" DataType="System.String"/>
+      <Column Name="DsType" DataType="System.String"/>
+      <Column Name="FileName" DataType="System.String"/>
+      <Column Name="IsDelete" DataType="System.String"/>
+      <Column Name="Status" DataType="System.String"/>
+      <Column Name="CreateTime" DataType="System.String"/>
+      <Column Name="CompanyID" DataType="System.String"/>
+    </TableDataSource>
+  </Dictionary>
+  <ReportPage Name="Page1">
+    <ReportTitleBand Name="ReportTitle1" Width="718.1" Height="170.08">
+      <BarcodeObject Name="Barcode2" Left="18.89" Top="9.44" Width="145" Height="85.05" Expression="[Table.ReportNum]"/>
+    </ReportTitleBand>
+    <PageHeaderBand Name="PageHeader1" Width="718.1" Height="170.08"/>
+    <DataBand Name="Data1" Width="718.1" Height="217.32"/>
+    <PageFooterBand Name="PageFooter1" Width="718.1" Height="170.08"/>
+  </ReportPage>
+</Report>

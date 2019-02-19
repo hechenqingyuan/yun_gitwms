@@ -1,0 +1,121 @@
+﻿@{
+    Layout = null;
+    Git.Storage.Entity.Sys.AdminEntity Entity = ViewBag.Entity;
+}
+@using Git.Framework.DataTypes;
+@using Git.Framework.DataTypes.ExtensionMethods;
+
+
+<div class="form-horizontal">
+    <br/>
+    <div class="row-fluid">
+        <div class="span6">
+            <div class="control-group">
+                <label class="control-label dialogtitle" for="firstName">用户名</label>
+                <div class="controls dialogcontent">
+                    <input type="text" name="UserName" class="input-medium" placeholder="" value="@Entity.UserName">
+                    <input type="hidden" name="UserNum" class="input-medium" placeholder="" value="@Entity.UserNum">
+                </div>
+            </div>
+        </div>
+        
+        <div class="span6">
+            <div class="control-group">
+                <label class="control-label dialogtitle" for="lastName">工号</label>
+                <div class="controls dialogcontent">
+                    <input type="text" name="UserCode" class="input-medium" placeholder="" value="@Entity.UserCode">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row-fluid" data-edit="pass">
+        <div class="span6">
+            <div class="control-group">
+                <label class="control-label dialogtitle" for="firstName">密码</label>
+                <div class="controls dialogcontent">
+                    <input type="password" name="PassWord" class="input-medium" placeholder="">
+                </div>
+            </div>
+        </div>
+        
+        <div class="span6">
+            <div class="control-group">
+                <label class="control-label dialogtitle" for="lastName">确认密码</label>
+                <div class="controls dialogcontent">
+                    <input type="password" name="ConfirmPass" class="input-medium" placeholder="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span6">
+            <div class="control-group">
+                <label class="control-label dialogtitle" for="firstName">姓名</label>
+                <div class="controls dialogcontent">
+                    <input type="text" name="RealName" class="input-medium" placeholder="" value="@Entity.RealName">
+                </div>
+            </div>
+        </div>
+        
+        <div class="span6">
+            <div class="control-group">
+                <label class="control-label dialogtitle" for="lastName">邮箱</label>
+                <div class="controls dialogcontent">
+                    <input type="text" name="Email" class="input-medium" placeholder="" value="@ViewBag.Entity.Email">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span6">
+            <div class="control-group">
+                <label class="control-label dialogtitle" for="firstName">电话</label>
+                <div class="controls dialogcontent">
+                    <input type="text" name="Phone" class="input-medium" placeholder="" value="@ViewBag.Entity.Phone">
+                </div>
+            </div>
+        </div>
+        
+        <div class="span6">
+            <div class="control-group">
+                <label class="control-label dialogtitle" for="lastName">手机</label>
+                <div class="controls dialogcontent">
+                    <input type="text" name="Mobile" class="input-medium" placeholder="" value="@ViewBag.Entity.Mobile">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span6">
+            <div class="control-group">
+                <label class="control-label dialogtitle" for="firstName">部门</label>
+                <div class="controls dialogcontent">
+                    <select class="input-medium" name="DepartNum" style="width:165px;">
+                        @Html.Raw(ViewBag.DepartList)
+                    </select>
+                </div>
+            </div>
+        </div>
+        
+        <div class="span6">
+            <div class="control-group">
+                <label class="control-label dialogtitle" for="lastName">角色</label>
+                <div class="controls dialogcontent">
+                    <select class="input-medium" name="RoleNum" style="width:165px;">
+                        @Html.Raw(ViewBag.RoleList)
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span6">
+            <div class="control-group">
+                <label class="control-label dialogtitle" for="firstName">备注</label>
+                <div class="controls dialogcontent">
+                    <input type="text" name="Remark" class="input-medium" placeholder="" value="@ViewBag.Entity.Remark">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

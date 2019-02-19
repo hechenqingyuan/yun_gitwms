@@ -1,0 +1,21 @@
+﻿@{
+    Layout = null;
+}
+
+
+<div class="form-horizontal">
+    <br/>
+    <div class="control-group">
+        <label class="control-label dialogtitle">单位编号</label>
+        <div class="controls dialogcontent">
+            <input type="text" name="MeasureNum" placeholder="自动生成,可不填" disabled="disabled" class="input-medium" value="@ViewBag.Entity.MeasureNum">
+            <input type="hidden" name="SN" value="@ViewBag.Entity.SN">
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label dialogtitle">单位名称</label>
+        <div class="controls dialogcontent">
+            <input type="text" name="MeasureName" placeholder="" class="input-medium" value="@ViewBag.Entity.MeasureName">
+        </div>
+    </div>
+</div>

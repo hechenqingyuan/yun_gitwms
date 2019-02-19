@@ -1,0 +1,271 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+您 Web 项目的发布/打包进程将使用此文件。您可以通过编辑此 MSBuild 文件
+来自定义该进程的行为。若要了解与此相关的详细信息，请访问 http://go.microsoft.com/fwlink/?LinkID=208121。
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>J:\WebSite\仓库4.0\API</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="Areas/Biz/Views/Web.config">
+      <publishTime>06/02/2016 11:18:37</publishTime>
+    </File>
+    <File Include="Areas/Finance/Views/Web.config">
+      <publishTime>05/12/2016 20:11:00</publishTime>
+    </File>
+    <File Include="Areas/Order/Views/Web.config">
+      <publishTime>04/06/2016 10:55:25</publishTime>
+    </File>
+    <File Include="Areas/Report/Views/Web.config">
+      <publishTime>04/22/2016 17:33:19</publishTime>
+    </File>
+    <File Include="Areas/Storage/Views/Web.config">
+      <publishTime>05/07/2016 09:57:17</publishTime>
+    </File>
+    <File Include="Areas/Store/Views/Web.config">
+      <publishTime>04/19/2018 13:44:17</publishTime>
+    </File>
+    <File Include="Areas/Sys/Views/Web.config">
+      <publishTime>03/04/2016 10:32:52</publishTime>
+    </File>
+    <File Include="bin/Git.Framework.Cache.dll">
+      <publishTime>09/09/2016 10:12:08</publishTime>
+    </File>
+    <File Include="bin/Git.Framework.Controller4.dll">
+      <publishTime>09/09/2016 10:12:08</publishTime>
+    </File>
+    <File Include="bin/Git.Framework.DataTypes.dll">
+      <publishTime>09/09/2016 10:12:08</publishTime>
+    </File>
+    <File Include="bin/Git.Framework.Events.dll">
+      <publishTime>09/09/2016 10:12:08</publishTime>
+    </File>
+    <File Include="bin/Git.Framework.Io.dll">
+      <publishTime>09/09/2016 10:12:08</publishTime>
+    </File>
+    <File Include="bin/Git.Framework.Log.dll">
+      <publishTime>09/09/2016 10:12:09</publishTime>
+    </File>
+    <File Include="bin/Git.Framework.MsSql.dll">
+      <publishTime>09/09/2016 10:12:08</publishTime>
+    </File>
+    <File Include="bin/Git.Framework.ORM.dll">
+      <publishTime>09/09/2016 10:12:08</publishTime>
+    </File>
+    <File Include="bin/Git.Framework.Resource.dll">
+      <publishTime>09/09/2016 10:12:09</publishTime>
+    </File>
+    <File Include="bin/Git.Storage.Common.dll">
+      <publishTime>04/19/2018 14:38:33</publishTime>
+    </File>
+    <File Include="bin/Git.Storage.DataAccess.dll">
+      <publishTime>04/19/2018 14:38:34</publishTime>
+    </File>
+    <File Include="bin/Git.Storage.Entity.dll">
+      <publishTime>04/19/2018 14:38:33</publishTime>
+    </File>
+    <File Include="bin/Git.Storage.IDataAccess.dll">
+      <publishTime>04/19/2018 14:38:34</publishTime>
+    </File>
+    <File Include="bin/Git.Storage.Provider.dll">
+      <publishTime>04/19/2018 14:38:36</publishTime>
+    </File>
+    <File Include="bin/Git.WMS.API.dll">
+      <publishTime>04/19/2018 14:38:37</publishTime>
+    </File>
+    <File Include="bin/ICSharpCode.SharpZipLib.dll">
+      <publishTime>09/09/2016 10:12:09</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Practices.EnterpriseLibrary.Caching.dll">
+      <publishTime>09/09/2016 10:12:08</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Practices.EnterpriseLibrary.Common.dll">
+      <publishTime>09/09/2016 10:12:08</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Practices.EnterpriseLibrary.Data.dll">
+      <publishTime>09/09/2016 10:12:09</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Practices.EnterpriseLibrary.Logging.dll">
+      <publishTime>09/09/2016 10:12:09</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Practices.ObjectBuilder.dll">
+      <publishTime>09/09/2016 10:12:09</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Practices.Unity.dll">
+      <publishTime>09/09/2016 10:12:08</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>03/03/2016 21:24:03</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Mvc.FixedDisplayModes.dll">
+      <publishTime>03/03/2016 21:24:04</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>03/10/2016 22:28:38</publishTime>
+    </File>
+    <File Include="bin/NPOI.dll">
+      <publishTime>09/09/2016 10:12:09</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.dll">
+      <publishTime>07/09/2013 11:04:48</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.Formatting.dll">
+      <publishTime>03/03/2016 21:24:04</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.WebRequest.dll">
+      <publishTime>07/09/2013 11:04:48</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>03/03/2016 21:24:03</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.dll">
+      <publishTime>03/03/2016 21:24:05</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.WebHost.dll">
+      <publishTime>03/03/2016 21:24:05</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>03/03/2016 21:24:04</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>03/03/2016 21:24:03</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>03/03/2016 21:24:03</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>03/03/2016 21:24:04</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>03/03/2016 21:24:04</publishTime>
+    </File>
+    <File Include="bin/TopSdk.dll">
+      <publishTime>09/09/2016 10:12:09</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Net.Http.Formatting.resources.dll">
+      <publishTime>03/03/2016 21:24:06</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Net.Http.resources.dll">
+      <publishTime>07/09/2013 11:34:42</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Net.Http.WebRequest.resources.dll">
+      <publishTime>07/09/2013 11:34:40</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Web.Helpers.resources.dll">
+      <publishTime>03/03/2016 21:24:06</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Web.Http.resources.dll">
+      <publishTime>03/03/2016 21:24:06</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Web.Http.WebHost.resources.dll">
+      <publishTime>03/03/2016 21:24:06</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Web.Mvc.resources.dll">
+      <publishTime>03/03/2016 21:24:06</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Web.Razor.resources.dll">
+      <publishTime>03/03/2016 21:24:05</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Web.WebPages.Deployment.resources.dll">
+      <publishTime>03/03/2016 21:24:06</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Web.WebPages.Razor.resources.dll">
+      <publishTime>03/03/2016 21:24:06</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Web.WebPages.resources.dll">
+      <publishTime>03/03/2016 21:24:06</publishTime>
+    </File>
+    <File Include="Configs/Cache/cache.config">
+      <publishTime>03/05/2016 08:46:23</publishTime>
+    </File>
+    <File Include="Configs/Cookie/cookie.config">
+      <publishTime>03/05/2016 08:46:23</publishTime>
+    </File>
+    <File Include="Configs/Data/Database.config">
+      <publishTime>05/10/2017 23:19:53</publishTime>
+    </File>
+    <File Include="Configs/Data/Database.xsx">
+      <publishTime>03/05/2016 08:46:23</publishTime>
+    </File>
+    <File Include="Configs/Data/DataOperations.xsx">
+      <publishTime>03/05/2016 08:46:23</publishTime>
+    </File>
+    <File Include="Configs/Data/DbCommandFiles.config">
+      <publishTime>03/05/2016 08:46:23</publishTime>
+    </File>
+    <File Include="Configs/Data/DbCommandFiles.xsx">
+      <publishTime>03/05/2016 08:46:23</publishTime>
+    </File>
+    <File Include="Configs/Data/DbCommonCommand.config">
+      <publishTime>04/22/2016 16:54:31</publishTime>
+    </File>
+    <File Include="Configs/Data/DbReportCommand.config">
+      <publishTime>03/05/2016 08:46:23</publishTime>
+    </File>
+    <File Include="Configs/File/File.config">
+      <publishTime>03/05/2016 08:46:23</publishTime>
+    </File>
+    <File Include="Configs/FileGroup/FileGroup.config">
+      <publishTime>03/05/2016 08:46:23</publishTime>
+    </File>
+    <File Include="Configs/FileValidate/FileVaild.config">
+      <publishTime>03/05/2016 08:46:23</publishTime>
+    </File>
+    <File Include="Configs/Message/Message.config">
+      <publishTime>03/05/2016 08:46:23</publishTime>
+    </File>
+    <File Include="Configs/Pages/Bad-PagesManage.config">
+      <publishTime>03/05/2016 08:46:23</publishTime>
+    </File>
+    <File Include="Configs/Pages/Check-PagesManage.config">
+      <publishTime>03/05/2016 08:46:23</publishTime>
+    </File>
+    <File Include="Configs/Pages/Client-PagesManage.config">
+      <publishTime>03/05/2016 08:46:23</publishTime>
+    </File>
+    <File Include="Configs/Pages/InStorage-PagesManage.config">
+      <publishTime>03/05/2016 08:46:23</publishTime>
+    </File>
+    <File Include="Configs/Pages/Move-PagesManage.config">
+      <publishTime>03/05/2016 08:46:23</publishTime>
+    </File>
+    <File Include="Configs/Pages/OutStorage-PagesManage.config">
+      <publishTime>03/05/2016 08:46:23</publishTime>
+    </File>
+    <File Include="Configs/Pages/PagesManage.config">
+      <publishTime>03/05/2016 08:46:23</publishTime>
+    </File>
+    <File Include="Configs/Pages/Product-PagesManage.config">
+      <publishTime>03/05/2016 08:46:23</publishTime>
+    </File>
+    <File Include="Configs/Pages/Report-PagesManage.config">
+      <publishTime>03/05/2016 08:46:23</publishTime>
+    </File>
+    <File Include="Configs/Pages/Return-PagesManage.config">
+      <publishTime>03/05/2016 08:46:23</publishTime>
+    </File>
+    <File Include="Configs/Pages/Store-PagesManage.config">
+      <publishTime>03/05/2016 08:46:23</publishTime>
+    </File>
+    <File Include="Configs/SEO/SEO.config">
+      <publishTime>03/05/2016 08:46:23</publishTime>
+    </File>
+    <File Include="Configs/Setting/setting.config">
+      <publishTime>03/01/2017 20:56:33</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>03/03/2016 21:43:13</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>03/11/2016 09:15:01</publishTime>
+    </File>
+    <File Include="Views/Web.config">
+      <publishTime>03/03/2016 21:43:13</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>04/19/2018 14:38:37</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

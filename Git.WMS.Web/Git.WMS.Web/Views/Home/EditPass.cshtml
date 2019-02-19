@@ -1,0 +1,26 @@
+﻿@{
+    Layout = null;
+}
+
+<div class="form-horizontal">
+    <br/>
+    <div class="control-group">
+        <label class="control-label dialogtitle">当前密码</label>
+        <div class="controls dialogcontent">
+            <input name="CurrentPass" type="password" placeholder="请输入当前密码" class="input-medium">
+            <input type="hidden" name="UserNum" value="@ViewBag.UserNum"/>
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label dialogtitle">密码</label>
+        <div class="controls dialogcontent">
+            <input name="NewPass" type="password" placeholder="请输入密码" class="input-medium">
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label dialogtitle">确认密码</label>
+        <div class="controls dialogcontent">
+            <input name="ConfirmPass" type="password" placeholder="请输入确认密码" class="input-medium">
+        </div>
+    </div>
+</div>

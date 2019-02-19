@@ -1,0 +1,109 @@
+﻿@{
+    Layout = null;
+
+    Git.Storage.Entity.Finance.FinanceBillEntity Entity = ViewBag.Entity;
+}
+@using Git.Framework.DataTypes;
+@using Git.Framework.DataTypes.ExtensionMethods;
+
+<div class="form-horizontal">
+    <br/>
+    <div class="row-fluid">
+        <div class="span6">
+            <div class="control-group">
+                <label class="control-label dialogtitle" for="BillNum">流水号</label>
+                <div class="controls dialogcontent">
+                    <input type="text" name="BillNum" class="input-medium" placeholder="可不填,自动生成" disabled="disabled" value="@Entity.BillNum">
+                    <input type="hidden" name="SnNum" class="input-medium" placeholder="" value="@Entity.SnNum">
+                </div>
+            </div>
+        </div>
+        
+        <div class="span6">
+            <div class="control-group">
+                <label class="control-label dialogtitle" for="CateNum">类别</label>
+                <div class="controls dialogcontent">
+                    <select class="input-medium" name="CateNum" style="width:165px;">
+                        @Html.Raw(ViewBag.CateList)
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span6">
+            <div class="control-group">
+                <label class="control-label dialogtitle" for="Title">名称</label>
+                <div class="controls dialogcontent">
+                    <input type="text" name="Title" class="input-medium" placeholder="" value="@Entity.Title">
+                </div>
+            </div>
+        </div>
+        
+        <div class="span6">
+            <div class="control-group">
+                <label class="control-label dialogtitle" for="LastTime">最后付款日</label>
+                <div class="controls dialogcontent">
+                    <input type="text" name="LastTime" class="input-medium" placeholder="" value="@Entity.LastTime.To("yyyy-MM-dd")" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd'})">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span6">
+            <div class="control-group">
+                <label class="control-label dialogtitle" for="FromName">付款方</label>
+                <div class="controls dialogcontent">
+                    <input type="text" name="FromName" class="input-medium" placeholder="" value="@Entity.FromName">
+                </div>
+            </div>
+        </div>
+        
+        <div class="span6">
+            <div class="control-group">
+                <label class="control-label dialogtitle" for="ToName">收款方</label>
+                <div class="controls dialogcontent">
+                    <input type="text" name="ToName" class="input-medium" placeholder="" value="@Entity.ToName">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span6">
+            <div class="control-group">
+                <label class="control-label dialogtitle" for="Amount">应收金额</label>
+                <div class="controls dialogcontent">
+                    <input type="text" name="Amount" class="input-medium" placeholder="" value="@Entity.Amount">
+                </div>
+            </div>
+        </div>
+        
+        <div class="span6">
+            <div class="control-group">
+                <label class="control-label dialogtitle" for="PrePayCount">付款次数</label>
+                <div class="controls dialogcontent">
+                    <input type="text" name="PrePayCount" class="input-medium" placeholder="" value="@Entity.PrePayCount">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span6">
+            <div class="control-group">
+                <label class="control-label dialogtitle" for="Remark">备注</label>
+                <div class="controls dialogcontent">
+                    <input type="text" name="Remark" class="input-medium" placeholder="" value="@Entity.Remark">
+                </div>
+            </div>
+        </div>
+        <div class="span6">
+            <div class="control-group">
+                <label class="control-label dialogtitle" for="PrePayCount">操作人</label>
+                <div class="controls dialogcontent">
+                    <input type="text" name="CreateUserName" class="input-medium" placeholder="" value="@Entity.CreateUserName">
+                    <input type="hidden" name="CreateUser" class="input-medium" placeholder="" value="@Entity.CreateUser">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

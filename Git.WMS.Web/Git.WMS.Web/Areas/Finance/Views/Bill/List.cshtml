@@ -1,0 +1,107 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+    @Html.Partial("_PageTitle")
+</head>
+<body class="fixed-top">
+
+    @Html.Partial("_Header")
+
+    <div id="container" class="row-fluid @ViewBag.MenuStatus">
+        @Html.Partial("_Sidebar")
+
+        <div id="body">
+            <div id="widget-config" class="modal hide">
+                <div class="modal-header">
+                    <button data-dismiss="modal" class="close" type="button">×</button>
+                    <h3>Widget Settings</h3>
+                </div>
+                <div class="modal-body">
+                    <p>Here will be a configuration form</p>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row-fluid">
+                    <div class="span12">
+                        @Html.Raw(ViewBag.NavMenu)
+                    </div>
+                </div>
+                <div class="row-fluid">
+                    <div class="span12">
+                        <div class="widget box light-grey">
+                            <div class="widget-title">
+                                <h4><i class="icon-globe"></i>应收管理</h4>
+                            </div>
+                            <div class="widget-body">
+
+                                <div class="clearfix margin-bottom-10">
+                                    <div class="btn-group" data-group="Status">
+                                        <button class="btn disabled" value="0">所有</button>
+                                        <button class="btn" value="1">待审核</button>
+                                        <button class="btn" value="2">审核通过</button>
+                                        <button class="btn" value="3">审核失败</button>
+                                        <button class="btn" value="6">部分付款</button>
+                                        <button class="btn" value="7">全部付款</button>
+                                    </div>
+                                    <div class="actions toolbar pull-right">
+                                        <a class="btn btn-primary" href="javascript:void(0)" data-command="Add"><i class="icon-plus"></i>&nbsp;新增</a>
+                                        <a class="btn btn btn-success" href="javascript:void(0)" data-command="Edit"><i class="icon-edit"></i>&nbsp;编辑</a>
+                                        <a class="btn btn-warning" href="javascript:void(0)" data-command="Delete"><i class="icon-remove"></i>&nbsp;删除</a>
+                                        <a class="btn btn-danger" href="javascript:void(0)" data-command="Refresh"><i class="icon-refresh"></i>&nbsp;刷新</a>
+                                        <a class="btn btn-info" href="javascript:void(0)" data-command="Excel"><i class="icon-download"></i>&nbsp;导出</a>
+                                    </div>
+                                </div>
+
+                                <div class="row-fluid">
+                                    <form class="form-horizontal" action="javascript:void(0)">
+                                        <div class="control-group">
+                                            <div data-condition="search">
+                                                流水号<input type="text" name="BillNum" class="input-medium" placeholder="请输入流水号" />
+                                                类别:<select class="input-medium" name="CateNum">@Html.Raw(ViewBag.CateList)</select>
+                                                <a class="btn btn-info" href="javascript:void(0)" data-command="search"><i class="icon-search"></i>&nbsp;搜索</a>
+                                                <button class="btn btn-primary " data-command="Advanced">高级搜索<span class="caret"></span></button>
+                                                <button class="btn btn-success " data-command="Clear"><i class="icon-random"></i>&nbsp;清空搜索条件</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <div class="form-horizontal form-actions formsearch" style="display:none;">
+                                        <div class="control-group formsearch">
+                                            <div data-condition="search">
+                                                付款方:<input type="text" name="FromName" class="input-medium" placeholder="请输入付款方" />
+                                                名称:<input type="text" name="Title" class="input-medium" placeholder="请输入名称" />
+                                                关联单号:<input type="text" name="ContractNum" class="input-medium" placeholder="请输入关联单号" />
+                                                起始时间:<input type="text" name="BeginTime" class="input-medium" placeholder="" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd'})" />-
+                                                <input type="text" name="EndTime" class="input-medium" placeholder="" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd'})" />
+                                                <a class="btn btn-info" href="javascript:void(0)" data-command="search"><i class="icon-search"></i>&nbsp;搜索</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row-fluid" id="tabList"></div>
+                                <div id="mypager" class="row-fluid" style="vertical-align:top;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @Html.Partial("_Foot")
+    <script src="/Theme/customer/Finance/Git.Framework.Bill.js"></script>
+    <script>
+        jQuery(document).ready(function () {
+            App.init();
+            FinanceBillManager.ToolBar();
+        });
+    </script>
+</body>
+</html>

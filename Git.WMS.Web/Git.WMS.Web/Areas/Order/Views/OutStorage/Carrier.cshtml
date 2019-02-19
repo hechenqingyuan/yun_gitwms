@@ -1,0 +1,27 @@
+﻿@{
+    Layout = null;
+}
+@using Git.Framework.DataTypes;
+@using Git.Framework.DataTypes.ExtensionMethods;
+@{
+    Git.Storage.Entity.OutStorage.OutStorageEntity Entity = ViewBag.Entity;
+}
+
+<div class="form-horizontal">
+    <br />
+    <input type="hidden" name="SnNum" value="@Entity.SnNum">
+    <div class="control-group">
+        <label class="control-label dialogtitle">承运商</label>
+        <div class="controls dialogcontent">
+            <select class="input-medium" name="CarrierNum" style="width:165px;">
+                @Html.Raw(ViewBag.Carrier)
+            </select>
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label dialogtitle">运单号</label>
+        <div class="controls dialogcontent">
+            <input name="LogisticsNo" type="text" class="input-medium" value="@Entity.LogisticsNo">
+        </div>
+    </div>
+</div>

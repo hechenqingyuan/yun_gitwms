@@ -1,0 +1,38 @@
+﻿﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReportInfo.Created="03/02/2017 18:41:34" ReportInfo.Modified="03/02/2017 18:41:34" ReportInfo.CreatorVersion="2015.3.7.0">
+  <Dictionary>
+    <TableDataSource Name="Table1" ReferenceName="Data.Table1" DataType="System.Int32" Enabled="true">
+      <Column Name="RoleName" DataType="System.String"/>
+      <Column Name="DepartName" DataType="System.String"/>
+      <Column Name="ParentName" DataType="System.String"/>
+      <Column Name="ID" DataType="System.String"/>
+      <Column Name="UserNum" DataType="System.String"/>
+      <Column Name="UserName" DataType="System.String"/>
+      <Column Name="PassWord" DataType="System.String"/>
+      <Column Name="UserCode" DataType="System.String"/>
+      <Column Name="RealName" DataType="System.String"/>
+      <Column Name="Email" DataType="System.String"/>
+      <Column Name="Mobile" DataType="System.String"/>
+      <Column Name="Phone" DataType="System.String"/>
+      <Column Name="CreateTime" DataType="System.String"/>
+      <Column Name="CreateIp" DataType="System.String"/>
+      <Column Name="CreateUser" DataType="System.String"/>
+      <Column Name="LoginCount" DataType="System.String"/>
+      <Column Name="Picture" DataType="System.String"/>
+      <Column Name="UpdateTime" DataType="System.String"/>
+      <Column Name="IsDelete" DataType="System.String"/>
+      <Column Name="Status" DataType="System.String"/>
+      <Column Name="DepartNum" DataType="System.String"/>
+      <Column Name="ParentNum" DataType="System.String"/>
+      <Column Name="RoleNum" DataType="System.String"/>
+      <Column Name="Remark" DataType="System.String"/>
+      <Column Name="CompanyID" DataType="System.String"/>
+    </TableDataSource>
+  </Dictionary>
+  <ReportPage Name="Page1" LeftMargin="0" TopMargin="0" RightMargin="0" BottomMargin="0">
+    <DataBand Name="Data1" Width="793.8" Height="141.75">
+      <BarcodeObject Name="Barcode1" Width="116" Height="94.49" Anchor="Top" AutoSize="false" Text="但愿人长久 千里共婵娟 打发的撒饭打发斯蒂芬打发" Zoom="0" Barcode="QR Code" Barcode.ErrorCorrection="L" Barcode.Encoding="UTF8" Barcode.QuietZone="true"/>
+      <TextObject Name="Text1" Left="9.43" Top="113.34" Width="103.95" Height="18.9" Border.Lines="All" Text="[Table1.UserName]" VertAlign="Center"/>
+    </DataBand>
+  </ReportPage>
+</Report>
