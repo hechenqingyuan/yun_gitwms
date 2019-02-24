@@ -24,9 +24,6 @@ https://github.com/hechenqingyuan/gitprint
 ### UPS物流快递C#版SDK,国内最全版本
 https://github.com/hechenqingyuan/UPS.SDK
 
-### UPS物流快递C#版SDK,国内最全版本
-https://github.com/hechenqingyuan/UPS.SDK
-
 ### 吉特日化生产执行制造系统 物流管理PDA程序
 https://github.com/hechenqingyuan/GitMes_PDA.git
 
