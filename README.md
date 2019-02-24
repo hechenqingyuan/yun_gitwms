@@ -86,5 +86,15 @@ https://github.com/hechenqingyuan/GitMes_PDA.git
 (7) 库存容量;
 
 
+# 联系方式
+
+手机：15800466429 同微信
+
+QQ：821865130 
+
+技术交流群：142050808  ;  88718955
+
+<img src="http://yun.gitwms.com/Weixin.jpg" width="350" height="500" alt=""/>
+<img src="http://yun.gitwms.com/Alipay.jpg" width="350" height="500" alt=""/>
 
 
