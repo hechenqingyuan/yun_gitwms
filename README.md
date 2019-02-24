@@ -94,6 +94,8 @@ QQ：821865130
 
 技术交流群：142050808  ;  88718955
 
+博客地址:http://www.cnblogs.com/qingyuan/
+
 <img src="http://yun.gitwms.com/Weixin.jpg" width="350" height="500" alt=""/>
 <img src="http://yun.gitwms.com/Alipay.jpg" width="350" height="500" alt=""/>
 
