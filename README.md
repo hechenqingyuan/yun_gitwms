@@ -4,6 +4,24 @@
 # 软件声明
 软件允许各位开发者用于自己软件的项目开发，请保留软件标题信息，版权信息，在下不胜感激。  坚决抵制某些企业拿了源程序，对外宣称是自己公司团队开发，如若发现必定网络舆论讨伐。
 
+# 其他开源软件
+
+### 吉特仓储管理系统基础版本
+https://github.com/hechenqingyuan/gitwms.git
+
+### 吉特标签打印小程序
+https://github.com/hechenqingyuan/gitprint
+
+### UPS物流快递C#版SDK,国内最全版本
+https://github.com/hechenqingyuan/UPS.SDK
+
+### UPS物流快递C#版SDK,国内最全版本
+https://github.com/hechenqingyuan/UPS.SDK
+
+### 吉特日化生产执行制造系统 物流管理PDA程序
+https://github.com/hechenqingyuan/GitMes_PDA.git
+
+
 # 主要功能模块
 ### 系统设置
 
